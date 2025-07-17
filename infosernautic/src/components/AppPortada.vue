@@ -378,7 +378,7 @@ body {
 
 .container {
   max-width: 75vw !important;
-  height: min-content;
+  min-height: fit-content !important;
   margin: 0 auto;
   padding: 0 20px;
 }

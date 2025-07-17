@@ -92,7 +92,7 @@
           </div>
           <div class="experience-right">
             <div class="yacht-image">
-              <img src="../assets/sobre-nosotros/foto 1.jpg" alt="Luxury Yacht" />
+              <img src="/img/FOTO 2222.1cd60f45.jpg" alt="Monica - Marine Surveyor" />
             </div>
           </div>
         </div>
@@ -103,51 +103,51 @@
     <section class="fleet">
       <div class="container">
         <div class="fleet-header">
-          <h2>Our Exclusive Fleet</h2>
-          <p>Select from luxury yachts designed for your needs be it a romantic escape, family trip, or corporate event.</p>
-          <button class="all-yachts-btn">All Available Yachts</button>
+          <h2>Survey Examples</h2>
+          <p>Professional marine surveys with detailed technical reports for classic and modern vessels.</p>
+          <router-link to="/tarifas" class="all-yachts-btn">View All Rates</router-link>
         </div>
         
         <div class="fleet-cards">
           <div class="yacht-card serenity">
             <div class="card-content">
-              <h3>Serenity Wave</h3>
-              <p>Modern design, full crew, premium dining experience</p>
+              <h3>Katxalot Survey</h3>
+              <p>Complete technical survey of classic sailing yacht including hull inspection, rigging assessment, and safety equipment evaluation.</p>
               <div class="yacht-specs">
                 <div class="spec">
-                  <span class="icon">👥</span>
-                  <span>10 Guest</span>
+                  <span class="icon">⚓</span>
+                  <span>Classic Yacht</span>
                 </div>
                 <div class="spec">
-                  <span class="icon">📏</span>
-                  <span>40+50 Dimension</span>
+                  <span class="icon">📋</span>
+                  <span>Full Report</span>
                 </div>
               </div>
-              <button class="view-details">View Details</button>
+              <button class="view-details">View Report</button>
             </div>
             <div class="card-image">
-              <img src="../assets/sobre-nosotros/FOTO 2.jpg" alt="Serenity Wave" />
+              <img src="../assets/tarifas/portadakatxalot.png" alt="Katxalot Survey" />
             </div>
           </div>
           
           <div class="yacht-card ocean">
             <div class="card-content">
-              <h3>Ocean's Embrace</h3>
-              <p>Modern design, full crew, premium dining experience</p>
+              <h3>Louise Michel Survey</h3>
+              <p>Comprehensive survey of motor yacht covering engine systems, electrical installations, and structural integrity assessment.</p>
               <div class="yacht-specs">
                 <div class="spec">
-                  <span class="icon">👥</span>
-                  <span>35 Guest</span>
+                  <span class="icon">🛥️</span>
+                  <span>Motor Yacht</span>
                 </div>
                 <div class="spec">
-                  <span class="icon">📏</span>
-                  <span>70+90 Dimension</span>
+                  <span class="icon">🔧</span>
+                  <span>Technical Analysis</span>
                 </div>
               </div>
-              <button class="view-details">View Details</button>
+              <button class="view-details">View Report</button>
             </div>
             <div class="card-image">
-              <img src="../assets/sobre-nosotros/foto 3.jpg" alt="Ocean's Embrace" />
+              <img src="../assets/tarifas/louisemichel.png" alt="Louise Michel Survey" />
             </div>
           </div>
         </div>
@@ -270,9 +270,10 @@ export default {
   filter: brightness(0) invert(1);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -281,7 +282,7 @@ export default {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
@@ -404,17 +405,17 @@ body {
 
 
 .company-name h1 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 4.2rem;
   margin-bottom: 20px;
   font-weight: 700;
   text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
   color: #ffffff;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 .company-name h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2.4rem;
   margin-bottom: 40px;
   font-weight: 400;
@@ -424,8 +425,8 @@ body {
 }
 
 .title-blue {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.8rem;
+  font-family: 'Caveat', cursive;
+  font-size: 3.2rem;
   color: #ffd700;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   font-weight: 600;
@@ -433,7 +434,7 @@ body {
 }
 
 .since-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.6rem;
   opacity: 0.9;
   font-weight: 300;
@@ -451,7 +452,7 @@ body {
 }
 
 .service-item {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
   text-align: center;
 }
 
@@ -485,13 +486,13 @@ body {
 }
 
 .experience-left h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #1a202c;
   margin-bottom: 30px;
   line-height: 1.2;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .experience-left > p {
@@ -620,7 +621,6 @@ body {
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-  transform: rotate(-3deg);
   transition: transform 0.3s ease;
 }
 
@@ -630,7 +630,7 @@ body {
 
 .yacht-image img {
   width: 100%;
-  height: 450px;
+  height: 650px;
   object-fit: cover;
 }
 
@@ -646,12 +646,12 @@ body {
 }
 
 .fleet-header h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #1a202c;
   margin-bottom: 25px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .fleet-header p {
@@ -719,7 +719,7 @@ body {
 }
 
 .card-content h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 600;
   color: #1a202c;
@@ -792,12 +792,12 @@ body {
 }
 
 .services-menu h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: #1e40af;
   margin-bottom: 50px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .menu-items {
@@ -908,13 +908,13 @@ body {
 }
 
 .contact-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 40px;
   color: #fbbf24;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .contact-icons {
@@ -946,7 +946,7 @@ body {
   justify-content: center;
   margin: 25px 0;
   font-size: 1.2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .contact-item img {
@@ -970,7 +970,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 40px 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .contact-address img {
@@ -986,7 +986,7 @@ body {
 
 .appointment-note {
   margin-top: 40px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   font-style: normal;
   opacity: 0.9;

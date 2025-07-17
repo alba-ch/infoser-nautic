@@ -6,14 +6,24 @@
         <div class="logo">
           <img src="../assets/logo-black.png" alt="VOYA-GO" class="logo-white" />
         </div>
-        <button class="contact-btn">Contact Us</button>
+        <div class="navbar-right">
+          <div class="language-selector">
+            <button @click="toggleLanguage" class="lang-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" fill="white"/>
+              </svg>
+              {{ currentLanguage === 'es' ? 'ES' : 'EN' }}
+            </button>
+          </div>
+          <button class="contact-btn">{{ currentLanguage === 'es' ? 'Contacto' : 'Contact Us' }}</button>
+        </div>
       </nav>
       
       <div class="hero-content">
         <div class="hero-center">
           <div class="company-name">
             <h1 class="hero-title"><i>Infoser Nautic SL</i></h1>
-            <h2><span class="title-blue">"Los Clásicos" </span><span class="since-text"><i>desde</i> 1994</span></h2>
+            <h2><span class="title-blue">{{ currentLanguage === 'es' ? '"Los Clásicos" ' : '"The Classics" ' }} </span><span class="since-text"><i>{{ currentLanguage === 'es' ? 'desde' : 'since' }}</i> 1994</span></h2>
           </div>
           <div class="services-description">
             <div class="service-item">
@@ -37,10 +47,10 @@
             <img src="../assets/logo-black.png" alt="VOYA-GO" class="logo-white" />
           </div>
           <div class="menu-items-nav">
-            <router-link to="/servicios" class="menu-link-nav">SERVICIOS</router-link>
-            <router-link to="/mundo-barco" class="menu-link-nav">EL MUNDO DEL BARCO</router-link>
-            <router-link to="/tarifas" class="menu-link-nav">TARIFAS</router-link>
-            <router-link to="/about-us" class="menu-link-nav">MI HISTORIA</router-link>
+            <router-link to="/servicios" class="menu-link-nav">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
+            <router-link to="/mundo-barco" class="menu-link-nav">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
+            <router-link to="/tarifas" class="menu-link-nav">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
+            <router-link to="/about-us" class="menu-link-nav">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
           </div>
         </div>
   
@@ -51,24 +61,24 @@
       <div class="container">
         <div class="experience-grid">
           <div class="experience-left">
-            <h2>Meet Monica</h2>
-            <p>With over 30 years of experience in the nautical industry, Monica is a certified marine surveyor and technical expert specializing in classic and luxury vessels. Her passion for boats and deep knowledge of maritime regulations make her the trusted choice for yacht owners and buyers worldwide.</p>
-            <router-link to="/about-us" class="read-more-btn">Read Full Story</router-link>
+            <h2>{{ currentLanguage === 'es' ? 'Conoce a Mónica' : 'Meet Mónica' }}</h2>
+            <p>{{ currentLanguage === 'es' ? 'Con más de 30 años de experiencia en la industria náutica, Mónica es una perito naval certificada y experta técnica especializada en embarcaciones clásicas y de lujo. Su pasión por los barcos y su profundo conocimiento de las regulaciones marítimas la convierten en la opción de confianza para propietarios y compradores de yates en todo el mundo.' : 'With over 30 years of experience in the nautical industry, Mónica is a certified marine surveyor and technical expert specializing in classic and luxury vessels. Her passion for boats and deep knowledge of maritime regulations make her the trusted choice for yacht owners and buyers worldwide.' }}</p>
+            <router-link to="/about-us" class="read-more-btn">{{ currentLanguage === 'es' ? 'Leer Historia Completa' : 'Read Full Story' }}</router-link>
             
             <div class="features">
               <div class="feature-row">
                 <div class="feature">
                   <div class="feature-icon">🎓</div>
                   <div class="feature-text">
-                    <h4>30+ Years Experience</h4>
-                    <p>Three decades of nautical expertise</p>
+                    <h4>{{ currentLanguage === 'es' ? '30+ Años de Experiencia' : '30+ Years Experience' }}</h4>
+                    <p>{{ currentLanguage === 'es' ? 'Tres décadas de experiencia náutica' : 'Three decades of nautical expertise' }}</p>
                   </div>
                 </div>
                 <div class="feature">
                   <div class="feature-icon">⚓</div>
                   <div class="feature-text">
-                    <h4>Certified Surveyor</h4>
-                    <p>Professional marine survey qualifications</p>
+                    <h4>{{ currentLanguage === 'es' ? 'Perito Certificado' : 'Certified Surveyor' }}</h4>
+                    <p>{{ currentLanguage === 'es' ? 'Cualificaciones profesionales en peritaje naval' : 'Professional marine survey qualifications' }}</p>
                   </div>
                 </div>
               </div>
@@ -76,15 +86,15 @@
                 <div class="feature">
                   <div class="feature-icon">🛥️</div>
                   <div class="feature-text">
-                    <h4>Classic Boat Specialist</h4>
-                    <p>Expert in vintage and luxury vessels</p>
+                    <h4>{{ currentLanguage === 'es' ? 'Especialista en Barcos Clásicos' : 'Classic Boat Specialist' }}</h4>
+                    <p>{{ currentLanguage === 'es' ? 'Experta en embarcaciones vintage y de lujo' : 'Expert in vintage and luxury vessels' }}</p>
                   </div>
                 </div>
                 <div class="feature">
                   <div class="feature-icon">🌍</div>
                   <div class="feature-text">
-                    <h4>International Recognition</h4>
-                    <p>Trusted by clients worldwide since 1994</p>
+                    <h4>{{ currentLanguage === 'es' ? 'Reconocimiento Internacional' : 'International Recognition' }}</h4>
+                    <p>{{ currentLanguage === 'es' ? 'Confianza de clientes en todo el mundo desde 1994' : 'Trusted by clients worldwide since 1994' }}</p>
                   </div>
                 </div>
               </div>
@@ -92,7 +102,7 @@
           </div>
           <div class="experience-right">
             <div class="yacht-image">
-              <img src="/img/FOTO 2222.1cd60f45.jpg" alt="Monica - Marine Surveyor" />
+              <img src="/img/FOTO 2222.1cd60f45.jpg" alt="Mónica - Marine Surveyor" />
             </div>
           </div>
         </div>
@@ -103,27 +113,27 @@
     <section class="fleet">
       <div class="container">
         <div class="fleet-header">
-          <h2>Survey Examples</h2>
-          <p>Professional marine surveys with detailed technical reports for classic and modern vessels.</p>
-          <router-link to="/tarifas" class="all-yachts-btn">View All Rates</router-link>
+          <h2>{{ currentLanguage === 'es' ? 'Ejemplos de Survey' : 'Survey Examples' }}</h2>
+          <p>{{ currentLanguage === 'es' ? 'Peritajes navales profesionales con informes técnicos detallados para embarcaciones clásicas y modernas.' : 'Professional marine surveys with detailed technical reports for classic and modern vessels.' }}</p>
+          <router-link to="/tarifas" class="all-yachts-btn">{{ currentLanguage === 'es' ? 'Ver Todas las Tarifas' : 'View All Rates' }}</router-link>
         </div>
         
         <div class="fleet-cards">
           <div class="yacht-card serenity">
             <div class="card-content">
-              <h3>Katxalot Survey</h3>
-              <p>Complete technical survey of classic sailing yacht including hull inspection, rigging assessment, and safety equipment evaluation.</p>
+              <h3>{{ currentLanguage === 'es' ? 'Survey Katxalot' : 'Katxalot Survey' }}</h3>
+              <p>{{ currentLanguage === 'es' ? 'Survey técnico completo de velero clásico incluyendo inspección del casco, evaluación del aparejo y equipos de seguridad.' : 'Complete technical survey of classic sailing yacht including hull inspection, rigging assessment, and safety equipment evaluation.' }}</p>
               <div class="yacht-specs">
                 <div class="spec">
                   <span class="icon">⚓</span>
-                  <span>Classic Yacht</span>
+                  <span>{{ currentLanguage === 'es' ? 'Yate Clásico' : 'Classic Yacht' }}</span>
                 </div>
                 <div class="spec">
                   <span class="icon">📋</span>
-                  <span>Full Report</span>
+                  <span>{{ currentLanguage === 'es' ? 'Informe Completo' : 'Full Report' }}</span>
                 </div>
               </div>
-              <button class="view-details">View Report</button>
+              <button class="view-details">{{ currentLanguage === 'es' ? 'Ver Informe' : 'View Report' }}</button>
             </div>
             <div class="card-image">
               <img src="../assets/tarifas/portadakatxalot.png" alt="Katxalot Survey" />
@@ -132,19 +142,19 @@
           
           <div class="yacht-card ocean">
             <div class="card-content">
-              <h3>Louise Michel Survey</h3>
-              <p>Comprehensive survey of motor yacht covering engine systems, electrical installations, and structural integrity assessment.</p>
+              <h3>{{ currentLanguage === 'es' ? 'Survey Louise Michel' : 'Louise Michel Survey' }}</h3>
+              <p>{{ currentLanguage === 'es' ? 'Survey integral de yate a motor cubriendo sistemas de motor, instalaciones eléctricas y evaluación de integridad estructural.' : 'Comprehensive survey of motor yacht covering engine systems, electrical installations, and structural integrity assessment.' }}</p>
               <div class="yacht-specs">
                 <div class="spec">
                   <span class="icon">🛥️</span>
-                  <span>Motor Yacht</span>
+                  <span>{{ currentLanguage === 'es' ? 'Yate a Motor' : 'Motor Yacht' }}</span>
                 </div>
                 <div class="spec">
                   <span class="icon">🔧</span>
-                  <span>Technical Analysis</span>
+                  <span>{{ currentLanguage === 'es' ? 'Análisis Técnico' : 'Technical Analysis' }}</span>
                 </div>
               </div>
-              <button class="view-details">View Report</button>
+              <button class="view-details">{{ currentLanguage === 'es' ? 'Ver Informe' : 'View Report' }}</button>
             </div>
             <div class="card-image">
               <img src="../assets/tarifas/louisemichel.png" alt="Louise Michel Survey" />
@@ -159,32 +169,32 @@
       <div class="container">
         <div class="shop-content">
           <div class="shop-text">
-            <h2>Visit Our Shop</h2>
-            <p>Discover exclusive nautical merchandise, professional reports, and specialized services for classic boat enthusiasts.</p>
+            <h2>{{ currentLanguage === 'es' ? 'Visita Nuestra Tienda' : 'Visit Our Shop' }}</h2>
+            <p>{{ currentLanguage === 'es' ? 'Descubre merchandising náutico exclusivo, informes profesionales y servicios especializados para entusiastas de barcos clásicos.' : 'Discover exclusive nautical merchandise, professional reports, and specialized services for classic boat enthusiasts.' }}</p>
             <div class="shop-links">
               <a href="https://ko-fi.com/infosernautic/shop" target="_blank" class="shop-btn primary">
-                🛍️ Visit Our Store
+                🛍️ {{ currentLanguage === 'es' ? 'Visitar Tienda' : 'Visit Our Store' }}
               </a>
               <a href="https://docs.google.com/spreadsheets/d/1t-13y7u2cRWIYO2ZxsN-SJXvm92NRyjn0SESdOsw0qQ/view?usp=drive_link" target="_blank" class="shop-btn secondary">
-                🎥 Special Boats for Film & Events
+                🎥 {{ currentLanguage === 'es' ? 'Barcos Especiales para Cine y Eventos' : 'Special Boats for Film & Events' }}
               </a>
             </div>
           </div>
           <div class="shop-services">
             <div class="service-card">
               <div class="service-icon">📚</div>
-              <h3>Professional Reports</h3>
-              <p>Detailed survey documentation</p>
+              <h3>{{ currentLanguage === 'es' ? 'Informes Profesionales' : 'Professional Reports' }}</h3>
+              <p>{{ currentLanguage === 'es' ? 'Documentación detallada de surveys' : 'Detailed survey documentation' }}</p>
             </div>
             <div class="service-card">
               <div class="service-icon">⚓</div>
-              <h3>Nautical Merchandise</h3>
-              <p>Exclusive classic boat items</p>
+              <h3>{{ currentLanguage === 'es' ? 'Merchandising Náutico' : 'Nautical Merchandise' }}</h3>
+              <p>{{ currentLanguage === 'es' ? 'Artículos exclusivos de barcos clásicos' : 'Exclusive classic boat items' }}</p>
             </div>
             <div class="service-card">
               <div class="service-icon">🎥</div>
-              <h3>Film & Events</h3>
-              <p>Boats for special productions</p>
+              <h3>{{ currentLanguage === 'es' ? 'Cine y Eventos' : 'Film & Events' }}</h3>
+              <p>{{ currentLanguage === 'es' ? 'Barcos para producciones especiales' : 'Boats for special productions' }}</p>
             </div>
           </div>
         </div>
@@ -251,42 +261,49 @@
     <section class="contact">
       <div class="container">
         <div class="contact-header">
-          <h2 class="contact-title">Get In Touch</h2>
-          <p class="contact-subtitle">Ready to start your marine survey? Contact Monica for professional nautical expertise.</p>
+          <h2 class="contact-title">{{ currentLanguage === 'es' ? 'Ponte en Contacto' : 'Get In Touch' }}</h2>
+          <p class="contact-subtitle">{{ currentLanguage === 'es' ? '¿Listo para comenzar tu peritaje naval? Contacta con Mónica para experiencia náutica profesional.' : 'Ready to start your marine survey? Contact Mónica for professional nautical expertise.' }}</p>
         </div>
         
         <div class="contact-grid">
           <div class="contact-methods">
             <div class="contact-method">
               <div class="method-icon">
-                <img src="../assets/portada/TEL.png" alt="Phone" />
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="white"/>
+                </svg>
               </div>
               <div class="method-info">
-                <h3>Phone</h3>
+                <h3>{{ currentLanguage === 'es' ? 'Teléfono' : 'Phone' }}</h3>
                 <a href="tel:+34609448459">+34 609 448 459</a>
-                <span class="country">🇪🇸 Spain</span>
+                <span class="country">🇪🇸 {{ currentLanguage === 'es' ? 'España' : 'Spain' }}</span>
               </div>
             </div>
             
             <div class="contact-method">
               <div class="method-icon">
-                <img src="../assets/portada/MAIL.png" alt="Email" />
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="white"/>
+                  <polyline points="22,6 12,13 2,6" stroke="#1e3a8a" stroke-width="2" fill="none"/>
+                </svg>
               </div>
               <div class="method-info">
-                <h3>Email</h3>
+                <h3>{{ currentLanguage === 'es' ? 'Correo' : 'Email' }}</h3>
                 <a href="mailto:barcosclasicos@infosernautic.com">barcosclasicos@infosernautic.com</a>
-                <span class="response-time">Response within 24h</span>
+                <span class="response-time">{{ currentLanguage === 'es' ? 'Respuesta en 24h' : 'Response within 24h' }}</span>
               </div>
             </div>
             
             <div class="contact-method">
               <div class="method-icon">
-                <img src="../assets/portada/WU.png" alt="WhatsApp" />
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.485 3.515" fill="#25D366"/>
+                </svg>
               </div>
               <div class="method-info">
                 <h3>WhatsApp</h3>
-                <a href="https://wa.me/34609448459">Message Monica</a>
-                <span class="availability">Quick response</span>
+                <a href="https://wa.me/34609448459">{{ currentLanguage === 'es' ? 'Mensaje a Mónica' : 'Message Mónica' }}</a>
+                <span class="availability">{{ currentLanguage === 'es' ? 'Respuesta rápida' : 'Quick response' }}</span>
               </div>
             </div>
           </div>
@@ -294,9 +311,9 @@
           <div class="contact-location">
             <div class="location-card">
               <div class="location-header">
-                <img src="../assets/portada/MONI.png" alt="Monica" class="monica-img" />
+                <img src="../assets/portada/MONI.png" alt="Mónica" class="monica-img" />
                 <div class="location-text">
-                  <h3>Our Location</h3>
+                  <h3>{{ currentLanguage === 'es' ? 'Nuestra Ubicación' : 'Our Location' }}</h3>
                   <p>M/S Bakea, Muelle de España<br>s/n, BARCELONA 08039</p>
                 </div>
               </div>
@@ -304,14 +321,17 @@
               <div class="appointment-info">
                 <div class="appointment-icon">📅</div>
                 <div class="appointment-text">
-                  <h4>By Appointment Only</h4>
-                  <p>Solo atendemos bajo visita concertada<br><em>We only attend by prior appointment</em></p>
+                  <h4>{{ currentLanguage === 'es' ? 'Solo con Cita Previa' : 'By Appointment Only' }}</h4>
+                  <p v-if="currentLanguage === 'es'">Solo atendemos bajo visita concertada</p>
+                  <p v-else>We only attend by prior appointment</p>
                 </div>
               </div>
               
               <div class="social-links">
                 <a href="#" class="social-link telegram">
-                  <img src="../assets/portada/TELEGRAM.png" alt="Telegram" />
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" fill="#0088cc"/>
+                  </svg>
                   <span>Telegram</span>
                 </a>
               </div>
@@ -326,6 +346,11 @@
 <script>
 export default {
   name: 'App',
+  data() {
+    return {
+      currentLanguage: 'es'
+    }
+  },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
   },
@@ -333,6 +358,9 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    toggleLanguage() {
+      this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
+    },
     scrollToSection() {
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     },
@@ -422,9 +450,44 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 50px;
-  position: relative;
+  padding: 20px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .logo {
@@ -436,7 +499,7 @@ body {
 }
 
 .logo img {
-  height: 60px;
+  height: 70px;
   width: auto;
   filter: brightness(0) invert(1);
 }
@@ -680,7 +743,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 50px;
+  max-width: 75vw;
+  margin: 0 auto;
 }
 
 .menu-logo img {
@@ -1203,6 +1268,12 @@ body {
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
+.method-icon svg {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
 .method-info h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.2rem;
@@ -1319,6 +1390,50 @@ body {
 .social-link img {
   width: 20px;
   height: 20px;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Wave Separators */
+.wave-separator {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-separator svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+
+.hero-to-menu {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+}
+
+.menu-to-experience {
+  background: rgba(30, 58, 138, 0.95);
+}
+
+.experience-to-fleet {
+  background: #f8fafc;
+}
+
+.fleet-to-shop {
+  background: white;
+}
+
+.shop-to-gallery {
+  background: white;
+}
+
+.gallery-to-contact {
+  background: #f8fafc;
 }
 
 /* Responsive Design */

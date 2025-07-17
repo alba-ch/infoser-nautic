@@ -1,15 +1,18 @@
 <template>
-    <div class="tarifas container">
-        <div class="header-images">
-            <img src="../assets/tarifas/tarifa-logo.png" alt="Tarifas" class="img-fluid"
-                style="width: 8em; height: fit-content;">
-            <img src="../assets/tarifas/antpm.png" alt="Tarifas" class="img-fluid"
-                style="width: 8em; height: fit-content;">
-        </div>
-        <header>
-            <h2>TARIFAS</h2>
-            <h4> año 2025</h4>
-        </header>
+    <div class="tarifas">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-logos">
+                    <img src="../assets/tarifas/tarifa-logo.png" alt="Tarifas" class="hero-logo">
+                    <img src="../assets/tarifas/antpm.png" alt="Tarifas" class="hero-logo">
+                </div>
+                <h1 class="hero-title">TARIFAS</h1>
+                <p class="hero-subtitle">Año 2025 - Servicios profesionales náuticos</p>
+            </div>
+        </section>
+        
+        <div class="container">
         <section class="first-section">
             <div class="no-flex-section">
                 <p><b><u>TASACIONES y VALORACIONES:</u><br>
@@ -360,11 +363,7 @@
         </section>
 
 
-        <div class="separador">
-            <img src="../assets/tarifas/separador2.png" alt="Separador" class="img-fluid"
-                style="width: 100%; max-height: 1em;">
         </div>
-
     </div>
 </template>
 
@@ -387,51 +386,87 @@ export default {
 </script>
 
 <style>
-/* Global Styles */
-.container {
-    font-family: Arial, sans-serif;
-    justify-self: center;
-    max-width: 59em;
-    margin: 0 auto;
-    color: black;
-    padding: 0;
-    min-height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-.tarifas .container {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.tarifas header {
-    padding: 1.7em;
-    padding-top: 0;
-    display: inline-block;
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
 }
 
-.tarifas header h2 {
-    font-size: 2rem;
-    font-style: none;
-    font-weight: 600;
-    display: inline;
+.container {
+    max-width: 75vw;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.tarifas header h4 {
-    font-size: 1.3rem;
-    font-style: none;
-    font-weight: 600;
-    text-align: center;
-    display: inline;
-}
-
-.tarifas .header-images {
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+    min-height: 50vh;
+    position: relative;
+    color: white;
     display: flex;
-    padding: 1em;
-    padding-bottom: 0;
-    padding-right: 1.5em;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 58, 138, 0.3);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+.hero-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.hero-logo {
+    height: 80px;
+    width: auto;
+    filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.tarifas {
+    font-family: 'Nunito', sans-serif;
+    background: white;
 }
 
 .tarifas .row {
@@ -539,34 +574,47 @@ export default {
     display: inline-flex;
 }
 
+.tarifas .more-info {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
 .tarifas .more-info img {
     margin-inline: 0.8em;
     margin-bottom: 1em;
+    filter: brightness(0) invert(1);
 }
 
 .tarifas .more-info a {
     font-size: 1.5rem;
-    font-family: 'Comic Sans MS';
-    color: #1155cc;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #ffd700;
     display: block;
     margin-bottom: 1em;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .tarifas .more-info a:hover {
-    color: #5f99ff;
+    color: white;
+    text-decoration: underline;
 }
 
 .tarifas .footer {
-    padding: 0.2em;
-    padding-left: 4.7em;
-    font-family: 'Calibri';
-    color: black;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: left;
+    background: #f8fafc;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
 }
 
 .tarifas .footer p {
+    font-family: 'Nunito', sans-serif;
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -624,6 +672,23 @@ export default {
         display: block;
     }
 
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-logos {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hero-logo {
+        height: 60px;
+    }
+
     p:has(> .title-ub) {
         text-align: center;
     }
@@ -665,32 +730,6 @@ export default {
         text-align: left !important;
     }
 
-    .tarifas .header-images {
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .tarifas .header-images img {
-        width: 6em !important;
-        height: auto !important;
-    }
-
-    .tarifas header h2 {
-        font-size: 1.5rem;
-        display: block;
-        text-align: center;
-    }
-
-    .tarifas header h4 {
-        font-size: 1rem;
-        display: block;
-        text-align: center;
-        margin-top: 0.3em;
-    }
-
     .tarifas .more-info a {
         font-size: 1.2rem;
     }
@@ -700,16 +739,24 @@ export default {
     }
 
     .tarifas .footer {
-        padding-left: 1em;
-        font-size: 1rem;
+        padding: 30px 15px;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
-    .tarifas header {
-        padding: 0.5em;
-        margin: 0;
+    .hero-title {
+        font-size: 2rem;
     }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-logo {
+        height: 50px;
+    }
+    
     .tarifas p {
         font-size: 0.8rem;
     }

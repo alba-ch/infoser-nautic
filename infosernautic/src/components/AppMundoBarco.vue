@@ -1,238 +1,351 @@
 <template>
-
-  <div class="mundo-barco container">
-    <div class="text">
-    <div class="no-flex-section">
-        <h3>EL MUNDO DEL BARCO
-          <br>
-          de recreo!
-        </h3>
-        <p>
-          Del mar se puede disfrutar de muchas maneras, en barco de motor, vela, remos, la variedad es amplia, sea cual sea tu barco, es necesario que tengas un buen <b>SEGURO y GESTOR</b>, y Eolo o Poseidón no lo quieran, un buen <b>ABOGADO</b>.
-<br><br>
-El corredor de <b>SEGUROS</b> de confianza y que recomendamos es <b>NAUTIA SEGUROS</b>,  <b>Álvaro</b> nos ha conseguido seguros hasta para los barcos más difíciles.
-<br><br>
-
-<span class="text-medium">Contacta con Alvaro de Falguera  <a href="https://www.nautia.net">https://www.nautia.net</a></span>
-        </p>
+  <div class="mundo-barco">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-center">
+          <h1 class="hero-title">EL MUNDO DEL BARCO</h1>
+          <p class="hero-subtitle">de recreo!</p>
+          <p class="hero-description">Servicios esenciales para navegantes: seguros, gestión y asesoría legal especializada</p>
+        </div>
       </div>
+    </section>
 
-    <div class="no-flex-section" style="margin-top: 22em;">
-      <p>
-        También es importante tener una <b>GESTORIA NÁUTICA</b>, que además si navega  va a entender tus problemas con el abanderamiento, cambio de titular, o lo que precises.
-        <br><br>
-        Nosotros siempre hemos confiado en las 2 mejores gestoras náuticas de España. Cristina Guiral y Mari Ramos.
-        <br><br>
-        <span class="text-medium">Contacta con <b>CRISTINA GUIRAL</b>: <a href="https://guiral.es/asesoria-nautica">https://guiral.es/asesoria-nautica</a></span>
-        <br>
-        <span class="text-medium">Contacta con <b>MARI RAMOS</b>: <a href="https://mrasesoresnauticos.com/nosotros">https://mrasesoresnauticos.com/nosotros</a></span>
-      </p>
+    <div class="container">
+      <!-- Services Section -->
+      <section class="services-section">
+        <div class="intro-text">
+          <p>Del mar se puede disfrutar de muchas maneras, en barco de motor, vela, remos, la variedad es amplia. Sea cual sea tu barco, es necesario que tengas un buen <strong>SEGURO y GESTOR</strong>, y Eolo o Poseidón no lo quieran, un buen <strong>ABOGADO</strong>.</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card insurance">
+            <div class="service-icon">🛡️</div>
+            <h3>Seguros Náuticos</h3>
+            <p>El corredor de <strong>SEGUROS</strong> de confianza y que recomendamos es <strong>NAUTIA SEGUROS</strong>. Álvaro nos ha conseguido seguros hasta para los barcos más difíciles.</p>
+            <div class="contact-info">
+              <strong>Contacta con Álvaro de Falguera</strong>
+              <a href="https://www.nautia.net" target="_blank" class="service-link">www.nautia.net</a>
+            </div>
+          </div>
+
+          <div class="service-card management">
+            <div class="service-icon">📋</div>
+            <h3>Gestoría Náutica</h3>
+            <p>También es importante tener una <strong>GESTORÍA NÁUTICA</strong>, que además si navega va a entender tus problemas con el abanderamiento, cambio de titular, o lo que precises.</p>
+            <p>Nosotros siempre hemos confiado en las 2 mejores gestoras náuticas de España:</p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <strong>CRISTINA GUIRAL</strong>
+                <a href="https://guiral.es/asesoria-nautica" target="_blank" class="service-link">guiral.es/asesoria-nautica</a>
+              </div>
+              <div class="contact-item">
+                <strong>MARI RAMOS</strong>
+                <a href="https://mrasesoresnauticos.com/nosotros" target="_blank" class="service-link">mrasesoresnauticos.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card legal">
+            <div class="service-icon">⚖️</div>
+            <h3>Asesoría Legal</h3>
+            <p>Ojalá nunca necesites un <strong>ABOGADO</strong>, pero si se da el caso, que sea el mejor especialista en derecho marítimo que tenemos en España. No lo dudes, contacta con Yamandú, armador, navegante, regatista y abogado especializado!</p>
+            <div class="contact-info">
+              <strong>Contacta con Yamandú Caorsi</strong>
+              <a href="https://nauticalegal.com/es" target="_blank" class="service-link">nauticalegal.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <div class="no-flex-section" style="margin-top: 17.5em;">
-      <p>
-        Ojala nunca necesites un <b>ABOGADO</b>, pero si se da el caso, que sea el mejor especialista en derecho marítimo que tenemos en España. No lo dudes, contacta con Yamandu, armador, navegante, regatista y abogado especializado!
-        <br><br>
-        <span class="text-medium">Contacta con <b>Yamandú Caorsi</b> : <a href="https://nauticalegal.com/es">https://nauticalegal.com/es</a></span>
-      </p>
-    </div>
   </div>
-
-    <section class="first-section">
-
-     
-    </section>
-
-    <section class="second-section">
-    </section>
-
-    <section class="third-section">
-    </section>
-  </div>
-
 </template>
 
 <style>
-/* Global Styles */
-.container {
-  font-family: 'Arial', sans-serif;
-  justify-self: center;
-  max-width: 59em;
-  min-height: 80em;
-  margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 75vw;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+  min-height: 70vh;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../assets/mundo-del-barco/FOTO 1.jpg') center/cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 58, 138, 0.4);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .mundo-barco {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: black;
-  background-color: white;
+  font-family: 'Nunito', sans-serif;
+  background: white;
 }
 
-.mundo-barco .first-section {
-  background-image: url('../assets/mundo-del-barco/FOTO 1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 39.5em;
-  filter: brightness(1.7);
-  opacity: 0.85;
+/* Services Section */
+.services-section {
+  padding: 120px 0;
+  background: #f8fafc;
 }
 
-.mundo-barco .second-section {
-  background-image: url('../assets/mundo-del-barco/FOTO 2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: brightness(2);
-  min-height: 31em;
-  opacity: 0.3;
+.intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.mundo-barco .third-section {
-  background-image: url('../assets/mundo-del-barco/FOTO 3.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 29em;
-  filter: brightness(1.3);
+.intro-text p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.8;
 }
 
-
-.mundo-barco .flex-section {
-  display: flex;
-}
-
-.mundo-barco .no-flex-section {
-  padding-inline: 20px;
-  margin-left: 8%;
-  margin-right: 10%;
-}
-
-.text {
-  position: absolute; /* Position the text container absolutely */
-  max-width: 59em;
-  color: black; /* Ensure text is visible on the background */
-  z-index: 10; /* Ensure the text is above the background */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.text h3 {
-  font-size: 2rem;
-  margin: 0;
-  padding-top: 1.7em;
-  font-style: italic;
+.service-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.service-card.insurance {
+  border-left-color: #10b981;
+}
+
+.service-card.management {
+  border-left-color: #3b82f6;
+}
+
+.service-card.legal {
+  border-left-color: #f59e0b;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.8rem;
   font-weight: 600;
-  padding-bottom: 0.5em;
+  color: #1a202c;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.text p {
-  font-size: 1.2rem;
-  text-align: left;
+.service-card p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
-.text .text-medium {
-  font-size: 1.4rem;
+.contact-info {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
 }
 
-/* solo el primer ancla */
-.text .text-medium a:first-child {
-  background-color: yellow;
-  text-decoration: underline;
-  font-size: 1.4rem;
-  margin-right: 0.5em;
+.contact-info strong {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.contact-item {
+  margin-bottom: 15px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.service-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
   font-weight: 600;
-
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 5px;
 }
 
-.text .text-medium a {
-  color: #1155cc !important;
-  margin-left: 0.5em;
+.service-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
-.mundo-barco .text-medium a:hover {
-  color: #5f99ff !important;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  .text {
-    position: absolute; /* Mantenemos posición absoluta */
-    max-width: 90vw;     /* Usamos casi todo el ancho de la ventana */
-    left: 50%;           /* Centramos horizontalmente */
-    transform: translateX(-50%);
-    padding: 0 1em;      
-    box-sizing: border-box;
-    overflow-wrap: break-word;
+  .hero-title {
+    font-size: 2.5rem;
   }
-
-  .mundo-barco .no-flex-section {
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-inline: 10px;
-    margin-top: 15em !important;
+  
+  .hero-subtitle {
+    font-size: 2rem;
   }
-
-  .mundo-barco .no-flex-section:first-child {
-    margin-top: 0 !important;
-  }
-
-  .text h3 {
-    font-size: 1.5rem;
-    padding-top: 1.7em;
-    padding-bottom: 0.5em;
-    font-style: italic;
-    font-weight: 600;
-  }
-
-  .text p {
+  
+  .hero-description {
     font-size: 1rem;
-    text-align: justify;
-    line-height: 1.4em;
   }
-
-  .text .text-medium {
-    font-size: 1.1rem;
+  
+  .services-section {
+    padding: 80px 0;
   }
-
-  .text .text-medium a:first-child {
-    font-size: 1.1rem;
-    background-color: yellow;
-    text-decoration: underline;
+  
+  .intro-text {
+    padding: 30px 20px;
+    margin-bottom: 40px;
   }
-
-  .text .text-medium a {
-    margin-left: 0.3em;
+  
+  .intro-text p {
+    font-size: 1rem;
   }
-
-  .third-section {
-    min-height: 40em !important;
-    background-size: cover !important;
+  
+  .service-card {
+    padding: 30px 20px;
   }
-
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-info {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-
-  .text {
-    position: absolute; /* Mantenemos posición absoluta */
-    max-width: 90vw;     /* Usamos casi todo el ancho de la ventana */
-    left: 50%;           /* Centramos horizontalmente */
-    transform: translateX(-50%);
-    padding: 0 1em;      
-    box-sizing: border-box;
-    overflow-wrap: break-word;
+  .hero-title {
+    font-size: 2rem;
   }
-
-  .mundo-barco .no-flex-section {
-    margin-top: 8em !important;
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
   }
-
-  .mundo-barco .no-flex-section:first-child {
-    margin-top: 0 !important;
+  
+  .hero-description {
+    font-size: 0.9rem;
   }
-
+  
+  .services-section {
+    padding: 60px 0;
+  }
+  
+  .intro-text {
+    padding: 25px 15px;
+  }
+  
+  .service-card {
+    padding: 25px 15px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-info {
+    padding: 15px;
+  }
 }
 
 

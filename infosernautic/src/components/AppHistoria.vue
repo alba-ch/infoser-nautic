@@ -1,5 +1,16 @@
 <template>
-    <div class="historia container">
+    <div class="historia">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-center">
+                    <h1 class="hero-title">MI HISTORIA</h1>
+                    <p class="hero-subtitle">30 años de experiencia en el mundo náutico - De marino a perito especializado</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
         <section class="first-section">
             <div class="flex-section">
                 <img src="../assets/sobre-nosotros/S1.png" alt="Monica Xufre" class="img-fluid"
@@ -287,27 +298,93 @@
             <iframe width="700" height="500" src="https://www.youtube.com/embed/O1PUEqk5C3Q" frameborder="0"
                 allowfullscreen></iframe>
         </div>
-
-
-
-
+        </div>
     </div>
 </template>
 
 <style>
-/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
 .container {
-    justify-self: center;
-    max-width: 59em;
+    max-width: 75vw;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+    min-height: 60vh;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/sobre-nosotros/FOTO 2222.jpg') center/cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 58, 138, 0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .historia {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Nunito', sans-serif;
     background: white;
-    color: black;
+    color: #333;
 }
 
 .historia section {
@@ -341,8 +418,89 @@
     margin-right: 10%;
 }
 
-.historia .first-section {
-    padding-top: 60px;
+.historia section {
+    padding: 80px 0;
+}
+
+.historia .story-section {
+    background: #f8fafc;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.story-content h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.story-text {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.story-text p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.video-section {
+    background: white;
+    text-align: center;
+}
+
+.video-section h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 30px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .historia .first-section img {
@@ -395,6 +553,31 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .story-content h2 {
+    font-size: 2rem;
+  }
+  
+  .story-text {
+    padding: 30px 20px;
+  }
+  
+  .video-section h3 {
+    font-size: 1.5rem;
+  }
+  
   .historia .flex-section {
     flex-direction: column;
     margin-left: 5%;
@@ -406,18 +589,6 @@
     margin-left: 5%;
     margin-right: 5%;
     padding-inline: 10px;
-  }
-
-  .historia h2 {
-    font-size: 1.5rem;
-  }
-
-  .historia h4 {
-    font-size: 1.1rem;
-  }
-
-  .historia p {
-    font-size: 1rem;
   }
 
   .historia .first-section img,
@@ -440,13 +611,6 @@
     margin-bottom: 1.5em;
   }
 
-  /* Ajuste del iframe para vídeo responsive */
-  .video-container iframe {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9;
-  }
-
   .two-images img {
     padding: 0 !important;
   }
@@ -454,24 +618,27 @@
   .two-images {
     padding: 0 !important;
   }
-
 }
 
 @media (max-width: 480px) {
-    .historia h2 {
-        font-size: 1.5rem;
+    .hero-title {
+        font-size: 2rem;
     }
     
-    .historia h4 {
-        font-size: 1.1rem;
+    .hero-subtitle {
+        font-size: 1rem;
     }
     
-    .historia p {
-        font-size: 0.9rem;
+    .story-content h2 {
+        font-size: 1.8rem;
     }
-
-    .historia .first-section {
-        padding-top: 30px;
+    
+    .story-text {
+        padding: 20px 15px;
+    }
+    
+    .historia section {
+        padding: 60px 0;
     }
     
     .historia .first-section img,

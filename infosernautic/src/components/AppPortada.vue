@@ -31,9 +31,9 @@
 
     <!-- Main Menu -->
     <nav class="main-menu" ref="mainMenu">
-      <div class="container">
+
         <div class="menu-content">
-          <div class="menu-logo">
+          <div class="menu-logo ">
             <img src="../assets/logo-black.png" alt="VOYA-GO" class="logo-white" />
           </div>
           <div class="menu-items-nav">
@@ -43,7 +43,7 @@
             <router-link to="/about-us" class="menu-link-nav">MI HISTORIA</router-link>
           </div>
         </div>
-      </div>
+  
     </nav>
 
     <!-- Experience Section -->
@@ -99,7 +99,7 @@
       </div>
     </section>
 
-    <!-- Fleet Section -->
+    <!-- Survey Examples Section -->
     <section class="fleet">
       <div class="container">
         <div class="fleet-header">
@@ -154,24 +154,39 @@
       </div>
     </section>
 
-    <!-- Services Menu -->
-    <section class="services-menu">
+    <!-- Shop Section -->
+    <section class="shop-section">
       <div class="container">
-        <h2>MENÚ</h2>
-        <div class="menu-items">
-          <router-link to="/servicios" class="menu-link">SERVICIOS</router-link>
-          <router-link to="/mundo-barco" class="menu-link">EL MUNDO DEL BARCO</router-link>
-          <router-link to="/tarifas" class="menu-link">TARIFAS</router-link>
-          <router-link to="/about-us" class="menu-link">MI HISTORIA</router-link>
-        </div>
-        
-        <div class="special-services">
-          <a href="https://ko-fi.com/infosernautic/shop" target="_blank" class="special-link">
-            VISITA NUESTRA TIENDA / VISIT OUR SHOP
-          </a>
-          <a href="https://docs.google.com/spreadsheets/d/1t-13y7u2cRWIYO2ZxsN-SJXvm92NRyjn0SESdOsw0qQ/view?usp=drive_link" target="_blank" class="special-link">
-            BARCOS especiales rodajes, cine, publicidad, eventos privados.
-          </a>
+        <div class="shop-content">
+          <div class="shop-text">
+            <h2>Visit Our Shop</h2>
+            <p>Discover exclusive nautical merchandise, professional reports, and specialized services for classic boat enthusiasts.</p>
+            <div class="shop-links">
+              <a href="https://ko-fi.com/infosernautic/shop" target="_blank" class="shop-btn primary">
+                🛍️ Visit Our Store
+              </a>
+              <a href="https://docs.google.com/spreadsheets/d/1t-13y7u2cRWIYO2ZxsN-SJXvm92NRyjn0SESdOsw0qQ/view?usp=drive_link" target="_blank" class="shop-btn secondary">
+                🎥 Special Boats for Film & Events
+              </a>
+            </div>
+          </div>
+          <div class="shop-services">
+            <div class="service-card">
+              <div class="service-icon">📚</div>
+              <h3>Professional Reports</h3>
+              <p>Detailed survey documentation</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">⚓</div>
+              <h3>Nautical Merchandise</h3>
+              <p>Exclusive classic boat items</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🎥</div>
+              <h3>Film & Events</h3>
+              <p>Boats for special productions</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -235,37 +250,72 @@
     <!-- Contact Section -->
     <section class="contact">
       <div class="container">
-        <h2 class="contact-title">CONTACTAR</h2>
-        
-        <div class="contact-icons">
-          <img src="../assets/portada/TEL.png" alt="Telephone" />
-          <img src="../assets/portada/WU.png" alt="WhatsApp" />
-          <img src="../assets/portada/TELEGRAM.png" alt="Telegram" />
+        <div class="contact-header">
+          <h2 class="contact-title">Get In Touch</h2>
+          <p class="contact-subtitle">Ready to start your marine survey? Contact Monica for professional nautical expertise.</p>
         </div>
         
-        <div class="contact-info">
-          <div class="contact-item">
-            <img src="../assets/portada/SPAIN.png" alt="España" />
-            <span>609 448 459</span>
-          </div>
-          
-          <div class="contact-item">
-            <img src="../assets/portada/MAIL.png" alt="Email" />
-            <a href="mailto:barcosclasicos@infosernautic.com">barcosclasicos@infosernautic.com</a>
-          </div>
-          
-          <div class="contact-address">
-            <img src="../assets/portada/MONI.png" alt="Contact" />
-            <div class="address-details">
-              <p>Dónde estamos? / Where we are?</p>
-              <p>M/S Bakea, Muelle de España<br>s/n, BARCELONA 08039</p>
+        <div class="contact-grid">
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="method-icon">
+                <img src="../assets/portada/TEL.png" alt="Phone" />
+              </div>
+              <div class="method-info">
+                <h3>Phone</h3>
+                <a href="tel:+34609448459">+34 609 448 459</a>
+                <span class="country">🇪🇸 Spain</span>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="method-icon">
+                <img src="../assets/portada/MAIL.png" alt="Email" />
+              </div>
+              <div class="method-info">
+                <h3>Email</h3>
+                <a href="mailto:barcosclasicos@infosernautic.com">barcosclasicos@infosernautic.com</a>
+                <span class="response-time">Response within 24h</span>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="method-icon">
+                <img src="../assets/portada/WU.png" alt="WhatsApp" />
+              </div>
+              <div class="method-info">
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/34609448459">Message Monica</a>
+                <span class="availability">Quick response</span>
+              </div>
             </div>
           </div>
           
-          <div class="appointment-note">
-            <p>Solo atendemos bajo visita concertada.<br />
-              We only attend by prior appointment
-            </p>
+          <div class="contact-location">
+            <div class="location-card">
+              <div class="location-header">
+                <img src="../assets/portada/MONI.png" alt="Monica" class="monica-img" />
+                <div class="location-text">
+                  <h3>Our Location</h3>
+                  <p>M/S Bakea, Muelle de España<br>s/n, BARCELONA 08039</p>
+                </div>
+              </div>
+              
+              <div class="appointment-info">
+                <div class="appointment-icon">📅</div>
+                <div class="appointment-text">
+                  <h4>By Appointment Only</h4>
+                  <p>Solo atendemos bajo visita concertada<br><em>We only attend by prior appointment</em></p>
+                </div>
+              </div>
+              
+              <div class="social-links">
+                <a href="#" class="social-link telegram">
+                  <img src="../assets/portada/TELEGRAM.png" alt="Telegram" />
+                  <span>Telegram</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -328,6 +378,7 @@ body {
 
 .container {
   max-width: 75vw !important;
+  height: min-content;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -900,11 +951,12 @@ body {
 }
 
 .gallery-container {
-  overflow-x: auto;
+  overflow-x: scroll !important;
   overflow-y: hidden;
   padding: 0 20px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  width: 100%;
 }
 
 .gallery-container::-webkit-scrollbar {
@@ -915,6 +967,7 @@ body {
   display: flex;
   gap: 20px;
   padding: 10px 0;
+  min-width: calc(8 * (300px + 20px));
 }
 
 .gallery-item {
@@ -976,103 +1029,296 @@ body {
 
 
 
+/* Shop Section */
+.shop-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.shop-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.shop-text h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.shop-text p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.shop-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.shop-btn.primary {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.shop-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.shop-btn.secondary {
+  background: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+
+.shop-btn.secondary:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.shop-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.service-card {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #3b82f6;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
 /* Contact Section */
 .contact {
   padding: 80px 0;
   background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   color: white;
+}
+
+.contact-header {
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .contact-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 40px;
-  color: #fbbf24;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 15px;
+  color: white;
   letter-spacing: -0.5px;
 }
 
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 50px;
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.contact-icons img {
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-3px);
+}
+
+.method-icon img {
   width: 50px;
   height: 50px;
-  transition: transform 0.3s ease;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
-.contact-icons img:hover {
-  transform: scale(1.15) translateY(-3px);
-}
-
-.contact-info {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 25px 0;
+.method-info h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.2rem;
-  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffd700;
 }
 
-.contact-item img {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
-}
-
-.contact-item a {
-  color: #fbbf24;
+.method-info a {
+  color: white;
   text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
   transition: color 0.3s ease;
 }
 
-.contact-item a:hover {
-  color: #f59e0b;
+.method-info a:hover {
+  color: #ffd700;
 }
 
-.contact-address {
+.method-info span {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.location-card {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.location-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 40px 0;
-  font-family: 'Nunito', sans-serif;
+  gap: 20px;
+  margin-bottom: 25px;
 }
 
-.contact-address img {
-  width: 140px;
-  height: auto;
-  margin-right: 25px;
+.monica-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.address-details {
-  text-align: left;
-  font-size: 1.1rem;
+.location-text h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 8px;
 }
 
-.appointment-note {
-  margin-top: 40px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  opacity: 0.9;
-  background: rgba(255,255,255,0.1);
+.location-text p {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.5;
+}
+
+.appointment-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
   padding: 20px;
+  background: rgba(255,255,255,0.05);
   border-radius: 10px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.appointment-icon {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.appointment-text h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+.appointment-text p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
 }
 
 /* Responsive Design */

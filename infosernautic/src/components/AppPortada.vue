@@ -51,39 +51,40 @@
       <div class="container">
         <div class="experience-grid">
           <div class="experience-left">
-            <h2>Experience the Ocean Like Never Before</h2>
-            <p>With years of expertise in luxury yacht charters, we provide personalized experiences, top-tier service, and a fleet of stunning yachts designed for your comfort and adventure.</p>
+            <h2>Meet Monica</h2>
+            <p>With over 30 years of experience in the nautical industry, Monica is a certified marine surveyor and technical expert specializing in classic and luxury vessels. Her passion for boats and deep knowledge of maritime regulations make her the trusted choice for yacht owners and buyers worldwide.</p>
+            <router-link to="/about-us" class="read-more-btn">Read Full Story</router-link>
             
             <div class="features">
               <div class="feature-row">
                 <div class="feature">
-                  <div class="feature-icon">⚓</div>
+                  <div class="feature-icon">🎓</div>
                   <div class="feature-text">
-                    <h4>Exclusive Fleet</h4>
-                    <p>Handpicked yachts for every desire</p>
+                    <h4>30+ Years Experience</h4>
+                    <p>Three decades of nautical expertise</p>
                   </div>
                 </div>
                 <div class="feature">
-                  <div class="feature-icon">🌍</div>
+                  <div class="feature-icon">⚓</div>
                   <div class="feature-text">
-                    <h4>Global Destinations</h4>
-                    <p>Sail the Mediterranean, Caribbean & beyond</p>
+                    <h4>Certified Surveyor</h4>
+                    <p>Professional marine survey qualifications</p>
                   </div>
                 </div>
               </div>
               <div class="feature-row">
                 <div class="feature">
-                  <div class="feature-icon">✨</div>
+                  <div class="feature-icon">🛥️</div>
                   <div class="feature-text">
-                    <h4>Bespoke Experiences</h4>
-                    <p>Custom itineraries & VIP service</p>
+                    <h4>Classic Boat Specialist</h4>
+                    <p>Expert in vintage and luxury vessels</p>
                   </div>
                 </div>
                 <div class="feature">
-                  <div class="feature-icon">🏆</div>
+                  <div class="feature-icon">🌍</div>
                   <div class="feature-text">
-                    <h4>Expert Guidance</h4>
-                    <p>Trusted yacht advisors since 2019</p>
+                    <h4>International Recognition</h4>
+                    <p>Trusted by clients worldwide since 1994</p>
                   </div>
                 </div>
               </div>
@@ -249,10 +250,12 @@ export default {
     },
     handleScroll() {
       const mainMenu = this.$refs.mainMenu;
+      if (!mainMenu) return;
+      
       const menuTop = mainMenu.offsetTop;
       const scrollY = window.scrollY;
       
-      if (scrollY >= menuTop) {
+      if (scrollY > menuTop) {
         mainMenu.classList.add('sticky-active');
       } else {
         mainMenu.classList.remove('sticky-active');
@@ -268,7 +271,8 @@ export default {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -400,32 +404,40 @@ body {
 
 
 .company-name h1 {
-  font-size: 3.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4.2rem;
   margin-bottom: 20px;
   font-weight: 700;
   text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
   color: #ffffff;
+  letter-spacing: -2px;
 }
 
 .company-name h2 {
-  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
   margin-bottom: 40px;
-  font-weight: 500;
+  font-weight: 400;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   color: #ffffff;
+  letter-spacing: 0.5px;
 }
 
 .title-blue {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.5rem;
-  color: #fbbf24;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.8rem;
+  color: #ffd700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  font-weight: 600;
+  font-style: normal;
 }
 
 .since-text {
-  font-size: 1.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
   opacity: 0.9;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 0.3px;
 }
 
 .services-description {
@@ -439,8 +451,7 @@ body {
 }
 
 .service-item {
-  font-family: 'Cambria', serif;
-  font-style: italic;
+  font-family: 'Inter', sans-serif;
   text-align: center;
 }
 
@@ -474,18 +485,39 @@ body {
 }
 
 .experience-left h2 {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #1a202c;
   margin-bottom: 30px;
   line-height: 1.2;
+  letter-spacing: -1px;
 }
 
 .experience-left > p {
   font-size: 1.2rem;
   color: #4a5568;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   line-height: 1.8;
+}
+
+.read-more-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.read-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
 .features {
@@ -532,12 +564,18 @@ body {
   position: relative;
 }
 
+/* Hero to Menu Transition */
+.hero::after {
+  background: linear-gradient(180deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 58, 138, 0.8) 100%);
+}
+
 /* Main Menu */
 .main-menu {
-  background: rgba(30, 58, 138, 0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(30, 58, 138, 0.95);
+  backdrop-filter: blur(20px);
   transition: all 0.3s ease;
   height: 60px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .main-menu.sticky-active {
@@ -608,10 +646,12 @@ body {
 }
 
 .fleet-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #1a202c;
   margin-bottom: 25px;
+  letter-spacing: -1px;
 }
 
 .fleet-header p {
@@ -679,8 +719,9 @@ body {
 }
 
 .card-content h3 {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a202c;
   margin-bottom: 15px;
 }
@@ -751,10 +792,12 @@ body {
 }
 
 .services-menu h2 {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: #1e40af;
   margin-bottom: 50px;
+  letter-spacing: -1px;
 }
 
 .menu-items {
@@ -865,11 +908,13 @@ body {
 }
 
 .contact-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 40px;
   color: #fbbf24;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: -1px;
 }
 
 .contact-icons {
@@ -901,7 +946,7 @@ body {
   justify-content: center;
   margin: 25px 0;
   font-size: 1.2rem;
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .contact-item img {
@@ -925,7 +970,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 40px 0;
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .contact-address img {
@@ -941,9 +986,9 @@ body {
 
 .appointment-note {
   margin-top: 40px;
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  font-style: italic;
+  font-style: normal;
   opacity: 0.9;
   background: rgba(255,255,255,0.1);
   padding: 20px;

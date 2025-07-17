@@ -343,7 +343,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 export default {
   name: 'App',
   data() {
@@ -529,7 +529,7 @@ body {
   padding: 80px 50px 40px 50px;
   position: relative;
   z-index: 5;
-  min-height: 60vh;
+  min-height: calc(100vh - 160px);
   text-align: center;
 }
 

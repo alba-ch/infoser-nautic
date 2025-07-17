@@ -178,18 +178,56 @@
 
     <!-- Gallery Section -->
     <section class="gallery">
-      <div class="gallery-images">
-        <div class="gallery-item">
-          <img src="../assets/sobre-nosotros/FOTO 4.jpg" alt="Yacht Interior" />
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/sobre-nosotros/FOTO 5.jpg" alt="Yacht Lounge" />
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/sobre-nosotros/foto 6.jpg" alt="Yacht Dining" />
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/sobre-nosotros/FOTO 7.jpg" alt="Yacht Bridge" />
+      <div class="gallery-container">
+        <div class="gallery-images">
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 4.jpg" alt="Yacht Interior" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Interior</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 5.jpg" alt="Yacht Lounge" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Lounge</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/foto 6.jpg" alt="Yacht Dining" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Dining</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 7.jpg" alt="Yacht Bridge" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Bridge</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/Foto 8.jpg" alt="Deck View" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Deck View</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/Foto 9.jpg" alt="Navigation" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Navigation</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 10.jpg" alt="Engine Room" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Engine Room</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 11.jpg" alt="Cabin" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Cabin</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -289,7 +327,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 75vw !important;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -391,7 +429,7 @@ body {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 30px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  /*text-shadow: 2px 2px 8px rgba(0,0,0,0.4);*/
 }
 
 .hero-subtitle p {
@@ -399,7 +437,7 @@ body {
   opacity: 0.9;
   line-height: 1.7;
   max-width: 450px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  /*text-shadow: 1px 1px 3px rgba(0,0,0,0.3);*/
 }
 
 
@@ -409,7 +447,7 @@ body {
   font-size: 4.2rem;
   margin-bottom: 20px;
   font-weight: 700;
-  text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+  /*text-shadow: 3px 3px 10px rgba(0,0,0,0.8);*/
   color: #ffffff;
   letter-spacing: -1px;
 }
@@ -857,35 +895,41 @@ body {
 
 /* Gallery Section */
 .gallery {
-  padding: 0;
+  padding: 40px 0;
+  background: #f8fafc;
+}
+
+.gallery-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none;
 }
 
 .gallery-images {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  height: 350px;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
 }
 
 .gallery-item {
-  overflow: hidden;
+  flex: 0 0 300px;
+  height: 250px;
   position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
-.gallery-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(59, 130, 246, 0.3), rgba(6, 182, 212, 0.3));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-}
-
-.gallery-item:hover::before {
-  opacity: 1;
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .gallery-item img {
@@ -896,8 +940,41 @@ body {
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(30, 58, 138, 0.9));
+  padding: 30px 20px 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item .gallery-overlay {
+  pointer-events: none;
+}
+
+.gallery-text {
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+
 
 /* Contact Section */
 .contact {

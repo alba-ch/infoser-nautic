@@ -16,6 +16,11 @@
             </button>
           </div>
           <button class="contact-btn">{{ currentLanguage === 'es' ? 'Contacto' : 'Contact Us' }}</button>
+          <button @click="toggleMobileMenu" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
       
@@ -38,6 +43,22 @@
         </div>
       </div>
     </section>
+
+    <!-- Mobile Menu Overlay -->
+    <div v-if="mobileMenuOpen" class="mobile-menu-overlay" @click="toggleMobileMenu">
+      <div class="mobile-menu" @click.stop>
+        <div class="mobile-menu-header">
+          <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="mobile-logo" />
+          <button @click="toggleMobileMenu" class="close-btn">×</button>
+        </div>
+        <div class="mobile-menu-items">
+          <router-link to="/servicios" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
+          <router-link to="/mundo-barco" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
+          <router-link to="/tarifas" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
+          <router-link to="/about-us" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Menu -->
     <nav class="main-menu" ref="mainMenu">
@@ -201,61 +222,7 @@
       </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-      <div class="gallery-container">
-        <div class="gallery-images">
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/FOTO 4.jpg" alt="Yacht Interior" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Yacht Interior</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/FOTO 5.jpg" alt="Yacht Lounge" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Yacht Lounge</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/foto 6.jpg" alt="Yacht Dining" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Yacht Dining</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/FOTO 7.jpg" alt="Yacht Bridge" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Yacht Bridge</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/Foto 8.jpg" alt="Deck View" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Deck View</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/Foto 9.jpg" alt="Navigation" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Navigation</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/FOTO 10.jpg" alt="Engine Room" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Engine Room</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="../assets/sobre-nosotros/FOTO 11.jpg" alt="Cabin" />
-            <div class="gallery-overlay">
-              <span class="gallery-text">Cabin</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Contact Section -->
     <section class="contact">
@@ -348,7 +315,8 @@ export default {
   name: 'App',
   data() {
     return {
-      currentLanguage: 'es'
+      currentLanguage: 'es',
+      mobileMenuOpen: false
     }
   },
   mounted() {
@@ -360,6 +328,9 @@ export default {
   methods: {
     toggleLanguage() {
       this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
+    },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
     },
     scrollToSection() {
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
@@ -529,7 +500,7 @@ body {
   padding: 80px 50px 40px 50px;
   position: relative;
   z-index: 5;
-  min-height: inherit;
+  min-height: calc(100vh - 160px);
   text-align: center;
 }
 
@@ -1442,17 +1413,25 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90vw !important;
+  }
+  
+  .hero-center {
+    padding: 60px 40px;
+  }
+  
+  .company-name h1 {
+    font-size: 3.8rem;
+  }
+  
+  .company-name h2 {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 1024px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 50px;
-    text-align: center;
-  }
-  
-  .hero-title {
-    font-size: 3.5rem;
-  }
-  
   .experience-grid {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -1469,26 +1448,125 @@ body {
   .card-image {
     height: 250px;
   }
+  
+  .shop-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 95vw !important;
+    padding: 0 15px;
+  }
+  
   .navbar {
     flex-direction: column;
-    gap: 20px;
-    padding: 25px;
+    gap: 15px;
+    padding: 20px 15px;
+  }
+  
+  .navbar-right {
+    gap: 15px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .lang-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .contact-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
   }
   
   .hero-content {
-    padding: 60px 25px 30px 25px;
+    padding: 40px 15px 20px 15px;
+    min-height: calc(100vh - 120px);
   }
   
-  .hero-title {
+  .hero-center {
+    padding: 40px 20px;
+  }
+  
+  .company-name h1 {
     font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .company-name h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .title-blue {
+    font-size: 2.4rem;
+  }
+  
+  .since-text {
+    font-size: 1.3rem;
   }
   
   .services-description {
     grid-template-columns: 1fr;
     gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .service-item h3 {
+    font-size: 1.2rem;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+  }
+  
+  .menu-content {
+    padding: 10px 15px;
+    max-width: 95vw;
+  }
+  
+  .menu-logo img {
+    height: 30px;
+  }
+  
+  .menu-items-nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .menu-link-nav {
+    font-size: 0.8rem;
+  }
+  
+  .experience {
+    padding: 60px 0;
+  }
+  
+  .experience-left h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .experience-left > p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .read-more-btn {
+    margin-bottom: 40px;
   }
   
   .feature-row {
@@ -1496,49 +1574,256 @@ body {
     gap: 30px;
   }
   
-  .menu-items {
-    grid-template-columns: 1fr;
+  .yacht-image img {
+    height: 400px;
   }
   
-  .gallery-images {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .contact-address {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .contact-address img {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  
-  .address-details {
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  
-  .experience-left h2 {
-    font-size: 2.2rem;
+  .fleet {
+    padding: 60px 0;
   }
   
   .fleet-header h2 {
     font-size: 2.2rem;
   }
   
+  .fleet-header p {
+    font-size: 1.1rem;
+  }
+  
+  .shop-section {
+    padding: 60px 0;
+  }
+  
+  .shop-text h2 {
+    font-size: 2.2rem;
+  }
+  
   .gallery-images {
-    grid-template-columns: 1fr;
-    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: auto;
   }
   
   .gallery-item {
-    height: 250px;
+    flex: 0 0 calc(50% - 10px);
+    height: 200px;
+  }
+  
+  .contact {
+    padding: 60px 0;
+  }
+  
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  
+  .contact-methods {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-method {
+    padding: 20px;
+    min-width: auto;
+  }
+  
+  .method-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .method-info a {
+    font-size: 1rem;
+  }
+  
+  .location-card {
+    padding: 20px;
+  }
+  
+  .monica-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .location-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .appointment-info {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 10px;
+  }
+  
+  .hero-content {
+    padding: 30px 10px 15px 10px;
+  }
+  
+  .hero-center {
+    padding: 20px 10px;
+  }
+  
+  .company-name h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .company-name h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .title-blue {
+    font-size: 1.8rem;
+  }
+  
+  .since-text {
+    font-size: 1.1rem;
+  }
+  
+  .services-description {
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .service-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  
+  .service-item p {
+    font-size: 0.9rem;
+  }
+  
+  .menu-items-nav {
+    gap: 10px;
+  }
+  
+  .menu-link-nav {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+  
+  .experience-left h2 {
+    font-size: 1.8rem;
+  }
+  
+  .experience-left > p {
+    font-size: 1rem;
+  }
+  
+  .feature-text h4 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-text p {
+    font-size: 0.9rem;
+  }
+  
+  .yacht-image img {
+    height: 300px;
+  }
+  
+  .fleet-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .fleet-header p {
+    font-size: 1rem;
+  }
+  
+  .card-content {
+    padding: 25px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .card-content p {
+    font-size: 0.9rem;
+  }
+  
+  .shop-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .shop-text p {
+    font-size: 1rem;
+  }
+  
+  .service-card {
+    padding: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .service-card p {
+    font-size: 0.8rem;
+  }
+  
+  .gallery-item {
+    flex: 0 0 100%;
+    height: 180px;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+  
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .method-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .method-info h3 {
+    font-size: 1rem;
+  }
+  
+  .method-info a {
+    font-size: 0.9rem;
+  }
+  
+  .location-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .monica-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .location-text h3 {
+    font-size: 1rem;
+  }
+  
+  .location-text p {
+    font-size: 0.9rem;
+  }
+  
+  .appointment-text h4 {
+    font-size: 1rem;
+  }
+  
+  .appointment-text p {
+    font-size: 0.85rem;
   }
 }
 </style>

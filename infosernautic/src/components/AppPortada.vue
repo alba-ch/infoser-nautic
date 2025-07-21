@@ -222,7 +222,61 @@
       </div>
     </section>
 
-
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <div class="gallery-container">
+        <div class="gallery-images">
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 4.jpg" alt="Yacht Interior" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Interior</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 5.jpg" alt="Yacht Lounge" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Lounge</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/foto 6.jpg" alt="Yacht Dining" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Dining</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 7.jpg" alt="Yacht Bridge" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yacht Bridge</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/Foto 8.jpg" alt="Deck View" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Deck View</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/Foto 9.jpg" alt="Navigation" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Navigation</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 10.jpg" alt="Engine Room" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Engine Room</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/sobre-nosotros/FOTO 11.jpg" alt="Cabin" />
+            <div class="gallery-overlay">
+              <span class="gallery-text">Cabin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact">
@@ -491,6 +545,96 @@ body {
 .contact-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover span {
+  background: #ffd700;
+}
+
+/* Mobile Menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu {
+  background: white;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-logo {
+  height: 40px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu-link {
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+  color: #3b82f6;
 }
 
 .hero-content {
@@ -1468,13 +1612,31 @@ body {
   }
   
   .navbar {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
   }
   
   .navbar-right {
-    gap: 15px;
+    gap: 10px;
+  }
+  
+  .lang-btn,
+  .contact-btn {
+    display: none;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .menu-items-nav {
+    display: none;
+  }
+  
+  .shop-section,
+  .gallery {
+    display: none;
   }
   
   .logo img {

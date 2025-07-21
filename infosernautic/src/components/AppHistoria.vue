@@ -461,16 +461,17 @@ body {
 .home-link {
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .home-link:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   color: #fbbf24;
 }
 

@@ -32,8 +32,8 @@
     <!-- Main Menu -->
     <nav class="main-menu" ref="mainMenu">
       <div class="menu-content">
-        <div class="menu-logo">
-          <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="logo-white" />
+        <div class="menu-home">
+          <router-link to="/" class="home-link">{{ currentLanguage === 'es' ? 'INICIO' : 'HOME' }}</router-link>
         </div>
         <div class="menu-items-nav">
           <router-link to="/servicios" class="menu-link-nav active">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
@@ -203,7 +203,7 @@ body {
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
-  min-height: 100vh;
+  min-height: 60vh;
   position: relative;
   color: white;
   overflow: hidden;
@@ -360,10 +360,25 @@ body {
   margin: 0 auto;
 }
 
-.menu-logo img {
-  height: 35px;
-  width: auto;
-  filter: brightness(0) invert(1);
+.menu-home {
+  display: flex;
+  align-items: center;
+}
+
+.home-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fbbf24;
 }
 
 .menu-items-nav {

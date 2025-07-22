@@ -16,8 +16,30 @@
             </button>
           </div>
           <button class="contact-btn">{{ currentLanguage === 'es' ? 'Contacto' : 'Contact Us' }}</button>
+          <button @click="toggleMobileMenu" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
+      
+      <!-- Mobile Menu Overlay -->
+      <div v-if="mobileMenuOpen" class="mobile-menu-overlay" @click="toggleMobileMenu">
+        <div class="mobile-menu" @click.stop>
+          <div class="mobile-menu-header">
+            <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="mobile-logo" />
+            <button @click="toggleMobileMenu" class="close-btn">×</button>
+          </div>
+          <div class="mobile-menu-items">
+            <router-link to="/" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'INICIO' : 'HOME' }}</router-link>
+            <router-link to="/servicios" class="mobile-menu-link active" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
+            <router-link to="/mundo-barco" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
+            <router-link to="/tarifas" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
+            <router-link to="/about-us" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+          </div>
+        </div>
+      </div>
       
       <div class="hero-content">
         <div class="hero-center">
@@ -146,7 +168,8 @@ export default {
   name: 'AppServicios',
   data() {
     return {
-      currentLanguage: 'es'
+      currentLanguage: 'es',
+      mobileMenuOpen: false
     }
   },
   mounted() {
@@ -158,6 +181,9 @@ export default {
   methods: {
     toggleLanguage() {
       this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
+    },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
     },
     handleScroll() {
       const mainMenu = this.$refs.mainMenu;
@@ -298,6 +324,97 @@ body {
 .contact-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover span {
+  background: #ffd700;
+}
+
+/* Mobile Menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu {
+  background: white;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-logo {
+  height: 40px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu-link {
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link.active {
+  color: #3b82f6;
 }
 
 .hero-content {
@@ -661,6 +778,20 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90vw !important;
+  }
+  
+  .hero-title {
+    font-size: 3.8rem;
+  }
+  
+  .section-title {
+    font-size: 3.2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-title {
     font-size: 3.5rem;
@@ -669,64 +800,179 @@ body {
   .section-title {
     font-size: 3rem;
   }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 95vw !important;
+    padding: 0 15px;
+  }
+  
   .navbar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  .navbar-right {
+    gap: 10px;
+  }
+  
+  .lang-btn,
+  .contact-btn {
+    display: none;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .menu-items-nav {
+    display: none;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .hero {
+    min-height: 50vh;
   }
   
   .hero-content {
-    padding: 60px 25px 30px 25px;
+    padding: 40px 15px 20px 15px;
+    min-height: calc(50vh - 80px);
+  }
+  
+  .hero-center {
+    padding: 40px 20px;
   }
   
   .hero-title {
     font-size: 2.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
   }
   
   .subtitle-text {
     font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  
+  .menu-content {
+    padding: 10px 15px;
+    max-width: 95vw;
+  }
+  
+  .home-link {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  
+  .services-section {
+    padding: 80px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 50px;
   }
   
   .section-title {
     font-size: 2.5rem;
+    margin-bottom: 15px;
   }
   
   .section-subtitle {
     font-size: 1.1rem;
+    line-height: 1.5;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
+    margin-bottom: 50px;
   }
   
   .service-card {
-    padding: 35px 25px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    margin: 0;
   }
   
   .service-card.featured {
     transform: none;
+    order: -1;
   }
   
   .service-card.featured:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .service-link {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .legal-note {
+    padding: 20px 25px;
+    margin-top: 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .legal-note p {
+    font-size: 0.9rem;
+  }
+  
+  .contact-cta {
+    padding: 80px 0;
   }
   
   .cta-content h2 {
     font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
   }
   
   .cta-subtitle {
     font-size: 1.3rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
   }
   
   .phone-contact {
     flex-direction: column;
     gap: 15px;
     padding: 20px 30px;
+    border-radius: 50px;
   }
   
   .phone-number {
@@ -735,41 +981,103 @@ body {
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 12px 10px;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  .hero-content {
+    padding: 30px 10px 15px 10px;
+  }
+  
+  .hero-center {
+    padding: 20px 10px;
+  }
+  
   .hero-title {
     font-size: 2.2rem;
+    line-height: 1.1;
   }
   
   .subtitle-text {
     font-size: 1.2rem;
   }
   
-  .section-title {
-    font-size: 2rem;
+  .services-section {
+    padding: 60px 0;
   }
   
-  .services-section,
-  .contact-cta {
-    padding: 80px 0;
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .services-grid {
+    gap: 20px;
+    margin-bottom: 40px;
   }
   
   .service-card {
-    padding: 30px 20px;
+    padding: 25px 20px;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
   }
   
   .service-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
   }
   
   .service-card p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .service-link {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .legal-note {
+    padding: 15px 20px;
+  }
+  
+  .legal-note p {
+    font-size: 0.85rem;
+  }
+  
+  .contact-cta {
+    padding: 60px 0;
   }
   
   .cta-content h2 {
     font-size: 2rem;
+    margin-bottom: 15px;
   }
   
   .cta-subtitle {
     font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .phone-contact {
+    padding: 15px 25px;
+    gap: 12px;
   }
   
   .phone-number {

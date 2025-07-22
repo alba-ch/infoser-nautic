@@ -98,48 +98,89 @@
                 <div class="pricing-image">
                   <img src="../assets/tarifas/TARIFAS1.png" alt="Tasación" class="service-image" />
                 </div>
-                <div class="pricing-table">
-                  <div class="price-row">
-                    <span class="length">8 a 10 mts</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">475 €</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">675 €</span>
+                <div class="pricing-cards">
+                  <div class="price-card">
+                    <div class="boat-length">8 - 10 mts</div>
+                    <div class="price-options">
+                      <div class="price-option basic">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Básico' : 'Basic' }}</span>
+                        <span class="price-value">475€</span>
+                      </div>
+                      <div class="price-option premium">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Completo' : 'Complete' }}</span>
+                        <span class="price-value">675€</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="price-row">
-                    <span class="length">10,01 a 12 mts</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">575 €</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">800 €</span>
+                  
+                  <div class="price-card">
+                    <div class="boat-length">10 - 12 mts</div>
+                    <div class="price-options">
+                      <div class="price-option basic">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Básico' : 'Basic' }}</span>
+                        <span class="price-value">575€</span>
+                      </div>
+                      <div class="price-option premium">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Completo' : 'Complete' }}</span>
+                        <span class="price-value">800€</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="price-row">
-                    <span class="length">12,01 a 15 mts</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">675 €</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">975 €</span>
+                  
+                  <div class="price-card">
+                    <div class="boat-length">12 - 15 mts</div>
+                    <div class="price-options">
+                      <div class="price-option basic">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Básico' : 'Basic' }}</span>
+                        <span class="price-value">675€</span>
+                      </div>
+                      <div class="price-option premium">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Completo' : 'Complete' }}</span>
+                        <span class="price-value">975€</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="price-row">
-                    <span class="length">15,01 a 18 mts</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">775 €</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">1.175 €</span>
+                  
+                  <div class="price-card">
+                    <div class="boat-length">15 - 18 mts</div>
+                    <div class="price-options">
+                      <div class="price-option basic">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Básico' : 'Basic' }}</span>
+                        <span class="price-value">775€</span>
+                      </div>
+                      <div class="price-option premium">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Completo' : 'Complete' }}</span>
+                        <span class="price-value">1.175€</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="price-row">
-                    <span class="length">18,01 a 22 mts</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">900 €</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">1.350 €</span>
+                  
+                  <div class="price-card">
+                    <div class="boat-length">18 - 22 mts</div>
+                    <div class="price-options">
+                      <div class="price-option basic">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Básico' : 'Basic' }}</span>
+                        <span class="price-value">900€</span>
+                      </div>
+                      <div class="price-option premium">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Completo' : 'Complete' }}</span>
+                        <span class="price-value">1.350€</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="price-row">
-                    <span class="length">22,01 a 24 mts</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">1.250 €</span>
-                    <span class="dots">……..…</span>
-                    <span class="price">1.650 €</span>
+                  
+                  <div class="price-card">
+                    <div class="boat-length">22 - 24 mts</div>
+                    <div class="price-options">
+                      <div class="price-option basic">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Básico' : 'Basic' }}</span>
+                        <span class="price-value">1.250€</span>
+                      </div>
+                      <div class="price-option premium">
+                        <span class="price-label">{{ currentLanguage === 'es' ? 'Completo' : 'Complete' }}</span>
+                        <span class="price-value">1.650€</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,7 +188,7 @@
             
             <div class="important-notes">
               <p class="note-text">
-                <strong>{{ currentLanguage === 'es' ? 'Válido embarcaciones de fibra de vidrio /Aluminio/Acero. Madera aumenta un 25% más. Otras esloras envía un mail con tu consulta:' : 'Valid for fiberglass/Aluminum/Steel vessels. Wood increases by 25% more. For other lengths send an email with your query:' }}</strong>
+                <strong>{{ currentLanguage === 'es' ? 'Válido embarcaciones de fibra de vidrio /Aluminio/Acero. Madera aumenta un 25% más. Otras esloras envía un mail con tu consulta: ' : 'Valid for fiberglass/Aluminum/Steel vessels. Wood increases by 25% more. For other lengths send an email with your query: ' }}</strong>
                 <a href="mailto:barcosclasicos@infosernautic.com" class="email-link">barcosclasicos@infosernautic.com</a>
               </p>
               <p class="disclaimer">
@@ -191,9 +232,25 @@
               <p>
                 {{ currentLanguage === 'es' ? 'Muchas veces nos encaminamos en busca del barco ideal, pero no sabemos por dónde empezar, no conocemos los modelos, sus particularidades, o simplemente tener una segunda opinión. En unas horas, podremos aclarar muchas cosas!' : 'Many times we set out in search of the ideal boat, but we don\'t know where to start, we don\'t know the models, their particularities, or simply want a second opinion. In a few hours, we can clarify many things!' }}
               </p>
-              <div class="pricing-info">
-                <p><strong>Barcelona</strong> {{ currentLanguage === 'es' ? 'presencial en nuestro barco/oficina a partir de' : 'in-person at our boat/office from' }} <strong>125 €</strong></p>
-                <p><strong>{{ currentLanguage === 'es' ? 'Telemática' : 'Remote' }}</strong> {{ currentLanguage === 'es' ? 'a partir de' : 'from' }} <strong>99 €</strong></p>
+              <div class="pricing-cards">
+                <div class="price-card">
+                  <div class="boat-length">Barcelona {{ currentLanguage === 'es' ? 'Presencial' : 'In-Person' }}</div>
+                  <div class="price-options">
+                    <div class="price-option premium single">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Desde' : 'From' }}</span>
+                      <span class="price-value">125€</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="price-card">
+                  <div class="boat-length">{{ currentLanguage === 'es' ? 'Telemática' : 'Remote' }}</div>
+                  <div class="price-options">
+                    <div class="price-option basic single">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Desde' : 'From' }}</span>
+                      <span class="price-value">99€</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -208,8 +265,17 @@
               <p>
                 {{ currentLanguage === 'es' ? 'Tenemos claro que nuestro barco necesita obras de mejora, pero no conocemos profesionales, ni precios ni por dónde empezar, ¡te ayudo!' : 'We are clear that our boat needs improvement work, but we don\'t know professionals, prices or where to start, I help you!' }}
               </p>
-              <div class="pricing-info">
-                <p><strong>Barcelona</strong> {{ currentLanguage === 'es' ? 'y área:' : 'and area:' }} <strong>175 €</strong>, {{ currentLanguage === 'es' ? 'resto consultar gastos de desplazamiento.' : 'rest consult travel expenses.' }}</p>
+              <div class="pricing-cards">
+                <div class="price-card">
+                  <div class="boat-length">Barcelona {{ currentLanguage === 'es' ? 'y área' : 'and area' }}</div>
+                  <div class="price-options">
+                    <div class="price-option premium single">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Precio fijo' : 'Fixed price' }}</span>
+                      <span class="price-value">175€</span>
+                    </div>
+                  </div>
+                  <p class="card-note">{{ currentLanguage === 'es' ? 'Resto consultar gastos de desplazamiento' : 'Rest consult travel expenses' }}</p>
+                </div>
               </div>
             </div>
             <div class="service-image">
@@ -244,25 +310,40 @@
                 {{ currentLanguage === 'es' ? 'Visitamos el barco con el interesado o solos, pero no emitimos informe técnico por escrito, simplemente señalamos in situ lo que encontramos. En caso de que el interesado no pueda acompañarnos en la visita, efectuamos o un video con el resultado de la inspección o una conexión vía videollamada donde enseñamos lo que hemos visto.' : 'We visit the boat with the interested party or alone, but we do not issue a written technical report, we simply point out on site what we find. In case the interested party cannot accompany us on the visit, we make either a video with the result of the inspection or a video call connection where we show what we have seen.' }}
               </p>
               <h4>{{ currentLanguage === 'es' ? 'TARIFAS:' : 'RATES:' }}</h4>
-              <div class="express-pricing">
-                <div class="pricing-grid-express">
-                  <div class="pricing-text">
-                    <p>{{ currentLanguage === 'es' ? 'Visita Barcelona y área,' : 'Visit Barcelona and area,' }}</p>
-                  </div>
-                  <div class="pricing-details">
-                    <p>{{ currentLanguage === 'es' ? 'para' : 'for' }} <strong>8 {{ currentLanguage === 'es' ? 'a' : 'to' }} 10 {{ currentLanguage === 'es' ? 'mts' : 'mts' }}</strong> {{ currentLanguage === 'es' ? 'a partir de' : 'from' }} <strong>400 €</strong></p>
-                    <p>{{ currentLanguage === 'es' ? 'con video o llamada:' : 'with video or call:' }} <strong>450 €</strong></p>
-                    <p>{{ currentLanguage === 'es' ? 'para' : 'for' }} <strong>10 {{ currentLanguage === 'es' ? 'a' : 'to' }} 12 {{ currentLanguage === 'es' ? 'mts' : 'mts' }}</strong> {{ currentLanguage === 'es' ? 'a partir de' : 'from' }} <strong>500 €</strong></p>
-                    <p>{{ currentLanguage === 'es' ? 'con video o llamada:' : 'with video or call:' }} <strong>575 €</strong></p>
+              <div class="pricing-cards">
+                <div class="price-card">
+                  <div class="boat-length">8 - 10 mts</div>
+                  <div class="price-options">
+                    <div class="price-option basic">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Presencial' : 'In-person' }}</span>
+                      <span class="price-value">400€</span>
+                    </div>
+                    <div class="price-option premium">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Con video' : 'With video' }}</span>
+                      <span class="price-value">450€</span>
+                    </div>
                   </div>
                 </div>
-                <p class="small-note">
-                  {{ currentLanguage === 'es' ? 'Otras esloras consultanos! para más de una unidad, se aplican descuentos, no te preocupes si el barco visitado no es el que te conviene, a la 2ª, 3ª y 4ª* unidad se aplican descuentos de hasta el 75%, porque sabemos que no es fácil!' : 'Other lengths consult us! for more than one unit, discounts apply, don\'t worry if the visited boat is not the one that suits you, to the 2nd, 3rd and 4th* unit discounts of up to 75% apply, because we know it\'s not easy!' }}
-                </p>
-                <p class="highlight-note">
-                  <strong>{{ currentLanguage === 'es' ? '*Nuestra experiencia es que a la 4ª visita "hay barco".' : '*Our experience is that on the 4th visit "there is a boat".' }}</strong>
-                </p>
+                <div class="price-card">
+                  <div class="boat-length">10 - 12 mts</div>
+                  <div class="price-options">
+                    <div class="price-option basic">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Presencial' : 'In-person' }}</span>
+                      <span class="price-value">500€</span>
+                    </div>
+                    <div class="price-option premium">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Con video' : 'With video' }}</span>
+                      <span class="price-value">575€</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <p class="small-note">
+                {{ currentLanguage === 'es' ? 'Otras esloras consultanos! para más de una unidad, se aplican descuentos, no te preocupes si el barco visitado no es el que te conviene, a la 2ª, 3ª y 4ª* unidad se aplican descuentos de hasta el 75%, porque sabemos que no es fácil!' : 'Other lengths consult us! for more than one unit, discounts apply, don\'t worry if the visited boat is not the one that suits you, to the 2nd, 3rd and 4th* unit discounts of up to 75% apply, because we know it\'s not easy!' }}
+              </p>
+              <p class="highlight-note">
+                <strong>{{ currentLanguage === 'es' ? '*Nuestra experiencia es que a la 4ª visita "hay barco".' : '*Our experience is that on the 4th visit "there is a boat".' }}</strong>
+              </p>
             </div>
             <div class="service-image">
               <img src="../assets/tarifas/FOTO 2 TARIFAS.jpeg" alt="Survey Express" />
@@ -279,32 +360,41 @@
                 {{ currentLanguage === 'es' ? 'Visitamos el barco y realizamos un informe técnico muy completo y detallado, sobre lo visto, detallando todos los elementos e identificando su posición y estado. También incluye el coste de reparación / rehabilitación aproximado.' : 'We visit the boat and carry out a very complete and detailed technical report on what was seen, detailing all elements and identifying their position and condition. It also includes the approximate repair/rehabilitation cost.' }}
               </p>
               <h4>{{ currentLanguage === 'es' ? 'TARIFAS:' : 'RATES:' }}</h4>
-              <div class="survey-pricing">
-                <div class="pricing-grid-survey">
-                  <div class="pricing-text">
-                    <p>{{ currentLanguage === 'es' ? 'Barcelona y área para' : 'Barcelona and area for' }}</p>
-                  </div>
-                  <div class="pricing-details">
-                    <p><strong>8 {{ currentLanguage === 'es' ? 'a' : 'to' }} 10 {{ currentLanguage === 'es' ? 'mts' : 'mts' }} 700 €</strong></p>
-                    <p><strong>10 {{ currentLanguage === 'es' ? 'a' : 'to' }} 12 {{ currentLanguage === 'es' ? 'mts' : 'mts' }} 900 €</strong></p>
+              <div class="pricing-cards">
+                <div class="price-card">
+                  <div class="boat-length">8 - 10 mts</div>
+                  <div class="price-options">
+                    <div class="price-option premium single">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Informe técnico' : 'Technical report' }}</span>
+                      <span class="price-value">700€</span>
+                    </div>
                   </div>
                 </div>
-                <p class="small-note">
-                  {{ currentLanguage === 'es' ? 'Más 12 mts: consultar según eslora y antigüedad.' : 'More than 12 mts: consult according to length and age.' }}
-                </p>
-                <div class="survey-example">
-                  <p>{{ currentLanguage === 'es' ? '¿Quieres ver un survey?' : 'Want to see a survey?' }}</p>
-                  <button @click="showPdf = !showPdf" v-if="!showPdf" class="pdf-btn">
-                    {{ currentLanguage === 'es' ? 'PINCHA AQUÍ' : 'CLICK HERE' }}
-                  </button>
-                  <button v-if="showPdf" @click="showPdf = false" class="pdf-btn">
-                    {{ currentLanguage === 'es' ? 'CERRAR' : 'CLOSE' }}
-                  </button>
-                  <div v-if="showPdf" class="pdf-container">
-                    <iframe src="SURVEY katxalot.pdf" width="100%" height="600px">
-                      {{ currentLanguage === 'es' ? 'Tu navegador no soporta PDF.' : 'Your browser does not support PDF.' }}
-                    </iframe>
+                <div class="price-card">
+                  <div class="boat-length">10 - 12 mts</div>
+                  <div class="price-options">
+                    <div class="price-option premium single">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Informe técnico' : 'Technical report' }}</span>
+                      <span class="price-value">900€</span>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <p class="small-note">
+                {{ currentLanguage === 'es' ? 'Más 12 mts: consultar según eslora y antigüedad.' : 'More than 12 mts: consult according to length and age.' }}
+              </p>
+              <div class="survey-example">
+                <p>{{ currentLanguage === 'es' ? '¿Quieres ver un survey?' : 'Want to see a survey?' }}</p>
+                <button @click="showPdf = !showPdf" v-if="!showPdf" class="pdf-btn">
+                  {{ currentLanguage === 'es' ? 'PINCHA AQUÍ' : 'CLICK HERE' }}
+                </button>
+                <button v-if="showPdf" @click="showPdf = false" class="pdf-btn">
+                  {{ currentLanguage === 'es' ? 'CERRAR' : 'CLOSE' }}
+                </button>
+                <div v-if="showPdf" class="pdf-container">
+                  <iframe src="SURVEY katxalot.pdf" width="100%" height="600px">
+                    {{ currentLanguage === 'es' ? 'Tu navegador no soporta PDF.' : 'Your browser does not support PDF.' }}
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -323,32 +413,41 @@
                 {{ currentLanguage === 'es' ? 'Visitamos el barco y realizamos un informe técnico escrito sobre lo visto, detallando todos los elementos vistos e identificando su posición y estado. Se hace un especial hincapié en todos los elementos de seguridad a bordo, activos y pasivos, detallando la ayuda de aparatos electrónicos a la navegación, así como la ubicación e idoneidad.' : 'We visit the boat and carry out a written technical report on what was seen, detailing all elements seen and identifying their position and condition. Special emphasis is placed on all safety elements on board, active and passive, detailing the help of electronic navigation devices, as well as their location and suitability.' }}
               </p>
               <h4>{{ currentLanguage === 'es' ? 'TARIFAS:' : 'RATES:' }}</h4>
-              <div class="survey-pricing">
-                <div class="pricing-grid-survey">
-                  <div class="pricing-text">
-                    <p>{{ currentLanguage === 'es' ? 'Barcelona y área para' : 'Barcelona and area for' }}</p>
-                  </div>
-                  <div class="pricing-details">
-                    <p><strong>8 {{ currentLanguage === 'es' ? 'a' : 'to' }} 10 {{ currentLanguage === 'es' ? 'mts' : 'mts' }} 830 €</strong></p>
-                    <p><strong>10 {{ currentLanguage === 'es' ? 'a' : 'to' }} 12 {{ currentLanguage === 'es' ? 'mts' : 'mts' }} 1.000 €</strong></p>
+              <div class="pricing-cards">
+                <div class="price-card">
+                  <div class="boat-length">8 - 10 mts</div>
+                  <div class="price-options">
+                    <div class="price-option premium single">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Para seguro' : 'For insurance' }}</span>
+                      <span class="price-value">830€</span>
+                    </div>
                   </div>
                 </div>
-                <p class="small-note">
-                  <strong>{{ currentLanguage === 'es' ? 'Más 12 mts: consultar según eslora y antigüedad.' : 'More than 12 mts: consult according to length and age.' }}</strong>
-                </p>
-                <div class="survey-example">
-                  <p>{{ currentLanguage === 'es' ? '¿Quieres ver un survey de un barco no muy moderno que obtuvo seguro todo riesgo?' : 'Want to see a survey of a not very modern boat that obtained comprehensive insurance?' }}</p>
-                  <button @click="showPdf2 = !showPdf2" v-if="!showPdf2" class="pdf-btn">
-                    {{ currentLanguage === 'es' ? 'PINCHA AQUÍ' : 'CLICK HERE' }}
-                  </button>
-                  <button v-if="showPdf2" @click="showPdf2 = false" class="pdf-btn">
-                    {{ currentLanguage === 'es' ? 'CERRAR' : 'CLOSE' }}
-                  </button>
-                  <div v-if="showPdf2" class="pdf-container">
-                    <iframe src="SURVEY katxalot.pdf" width="100%" height="600px">
-                      {{ currentLanguage === 'es' ? 'Tu navegador no soporta PDF.' : 'Your browser does not support PDF.' }}
-                    </iframe>
+                <div class="price-card">
+                  <div class="boat-length">10 - 12 mts</div>
+                  <div class="price-options">
+                    <div class="price-option premium single">
+                      <span class="price-label">{{ currentLanguage === 'es' ? 'Para seguro' : 'For insurance' }}</span>
+                      <span class="price-value">1.000€</span>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <p class="small-note">
+                <strong>{{ currentLanguage === 'es' ? 'Más 12 mts: consultar según eslora y antigüedad.' : 'More than 12 mts: consult according to length and age.' }}</strong>
+              </p>
+              <div class="survey-example">
+                <p>{{ currentLanguage === 'es' ? '¿Quieres ver un survey de un barco no muy moderno que obtuvo seguro todo riesgo?' : 'Want to see a survey of a not very modern boat that obtained comprehensive insurance?' }}</p>
+                <button @click="showPdf2 = !showPdf2" v-if="!showPdf2" class="pdf-btn">
+                  {{ currentLanguage === 'es' ? 'PINCHA AQUÍ' : 'CLICK HERE' }}
+                </button>
+                <button v-if="showPdf2" @click="showPdf2 = false" class="pdf-btn">
+                  {{ currentLanguage === 'es' ? 'CERRAR' : 'CLOSE' }}
+                </button>
+                <div v-if="showPdf2" class="pdf-container">
+                  <iframe src="SURVEY katxalot.pdf" width="100%" height="600px">
+                    {{ currentLanguage === 'es' ? 'Tu navegador no soporta PDF.' : 'Your browser does not support PDF.' }}
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -916,36 +1015,153 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.pricing-table {
+.pricing-cards {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
 }
 
-.price-row {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
-  align-items: center;
-  padding: 15px 20px;
-  background: #f8fafc;
-  border-radius: 10px;
+.price-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.8) 100%);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4, #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.price-card:hover::before {
+  opacity: 1;
+}
+
+.boat-length {
   font-size: 1rem;
-}
-
-.length {
   font-weight: 600;
-  color: #1a202c;
-}
-
-.dots {
-  color: #94a3b8;
-  font-weight: 300;
-}
-
-.price {
-  font-weight: 700;
-  color: #3b82f6;
+  color: #1e40af;
   text-align: center;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+  border-radius: 25px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.price-options {
+  display: flex;
+  gap: 12px;
+}
+
+.price-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.price-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+}
+
+.price-option.basic {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(14, 165, 233, 0.05));
+  border: 1.5px solid rgba(6, 182, 212, 0.2);
+}
+
+.price-option.basic::before {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(14, 165, 233, 0.08));
+}
+
+.price-option.premium {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.05));
+  border: 1.5px solid rgba(59, 130, 246, 0.2);
+}
+
+.price-option.premium::before {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.08));
+}
+
+.price-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.price-option:hover::before {
+  opacity: 1;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.price-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.price-option.single {
+  flex: none;
+  min-width: 140px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.08));
+  border: 1.5px solid rgba(59, 130, 246, 0.25);
+}
+
+.card-note {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-style: italic;
+  text-align: center;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(59, 130, 246, 0.03));
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.4;
 }
 
 .important-notes {
@@ -1491,23 +1707,34 @@ body {
     margin: 0 auto;
   }
   
-  .price-row {
-    grid-template-columns: 1fr auto 1fr;
+  .pricing-cards {
+    gap: 15px;
+  }
+  
+  .price-card {
+    padding: 15px;
+  }
+  
+  .boat-length {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    padding: 6px;
+  }
+  
+  .price-options {
     gap: 8px;
-    padding: 12px 15px;
-    font-size: 0.9rem;
   }
   
-  .length {
-    font-size: 0.85rem;
+  .price-option {
+    padding: 10px 8px;
   }
   
-  .price {
-    font-size: 0.9rem;
+  .price-label {
+    font-size: 0.7rem;
   }
   
-  .dots {
-    display: none;
+  .price-value {
+    font-size: 1.1rem;
   }
   
   .important-notes {
@@ -1539,13 +1766,24 @@ body {
   }
   
   .service-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
   }
   
   .service-text h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 15px;
+    color: #1a202c;
+    font-weight: 700;
+    text-align: center;
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 8px;
   }
   
   .express-title {
@@ -1565,15 +1803,10 @@ body {
     font-size: 1.1rem !important;
   }
   
-  .pricing-info,
-  .express-pricing {
-    padding: 15px;
-    margin-top: 15px;
-  }
-  
-  .pricing-info p {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
+  .card-note {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    padding: 6px;
   }
   
   .service-image img {
@@ -1736,16 +1969,30 @@ body {
     padding: 5px 12px;
   }
   
-  .price-row {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 5px;
-    padding: 10px;
+  .price-card {
+    padding: 12px;
   }
   
-  .length,
-  .price {
-    font-size: 0.8rem;
+  .boat-length {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .price-options {
+    gap: 6px;
+  }
+  
+  .price-option {
+    padding: 8px 6px;
+  }
+  
+  .price-label {
+    font-size: 0.65rem;
+  }
+  
+  .price-value {
+    font-size: 1rem;
   }
   
   .service-card {
@@ -1753,11 +2000,13 @@ body {
   }
   
   .service-text h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    padding: 12px;
   }
   
   .service-text h4 {
     font-size: 1rem;
+    padding: 8px;
   }
   
   .express-title {
@@ -1769,7 +2018,10 @@ body {
   }
   
   .service-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: left;
   }
   
   .highlight-text {
@@ -1780,13 +2032,10 @@ body {
     width: 120px;
   }
   
-  .pricing-info,
-  .express-pricing {
-    padding: 12px;
-  }
-  
-  .pricing-details p {
-    font-size: 0.8rem;
+  .card-note {
+    font-size: 0.75rem;
+    margin-top: 6px;
+    padding: 5px;
   }
   
   .small-note {

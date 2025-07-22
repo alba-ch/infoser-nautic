@@ -1072,6 +1072,15 @@ body {
 .price-options {
   display: flex;
   gap: 12px;
+  justify-content: center;
+}
+
+.price-options:has(.price-option:not(.single)) {
+  justify-content: space-between;
+}
+
+.price-options:has(.price-option.single:only-child) {
+  justify-content: center;
 }
 
 .price-option {
@@ -1148,6 +1157,10 @@ body {
   min-width: 140px;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.08));
   border: 1.5px solid rgba(59, 130, 246, 0.25);
+}
+
+.price-options .price-option.single:only-child {
+  margin: 0 auto;
 }
 
 .card-note {

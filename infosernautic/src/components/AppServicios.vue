@@ -56,7 +56,6 @@
       <div class="menu-content">
         <div class="menu-home">
           <router-link to="/" class="home-link">{{ currentLanguage === 'es' ? 'INICIO' : 'HOME' }}</router-link>
-          <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="mobile-sticky-logo" />
         </div>
         <div class="menu-items-nav">
           <router-link to="/servicios" class="menu-link-nav active">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
@@ -893,6 +892,36 @@ body {
     background: white;
     border-radius: 2px;
     transition: all 0.3s ease;
+  }
+  
+  .main-menu.sticky-active .menu-home {
+    display: flex;
+  }
+  
+  .main-menu.sticky-active .home-link {
+    display: none;
+  }
+  
+  .main-menu.sticky-active .menu-home::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url('../assets/logo-black.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0) invert(1);
+  }
+  
+  @media (min-width: 769px) {
+    .main-menu.sticky-active .menu-home::after {
+      display: none;
+    }
+    
+    .main-menu.sticky-active .home-link {
+      display: block;
+    }
   }
   
   .menu-items-nav {

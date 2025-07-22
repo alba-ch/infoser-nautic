@@ -16,8 +16,30 @@
             </button>
           </div>
           <button class="contact-btn">{{ currentLanguage === 'es' ? 'Contacto' : 'Contact Us' }}</button>
+          <button @click="toggleMobileMenu" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
+      
+      <!-- Mobile Menu Overlay -->
+      <div v-if="mobileMenuOpen" class="mobile-menu-overlay" @click="toggleMobileMenu">
+        <div class="mobile-menu" @click.stop>
+          <div class="mobile-menu-header">
+            <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="mobile-logo" />
+            <button @click="toggleMobileMenu" class="close-btn">×</button>
+          </div>
+          <div class="mobile-menu-items">
+            <router-link to="/" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'INICIO' : 'HOME' }}</router-link>
+            <router-link to="/servicios" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
+            <router-link to="/mundo-barco" class="mobile-menu-link active" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
+            <router-link to="/tarifas" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
+            <router-link to="/about-us" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+          </div>
+        </div>
+      </div>
       
       <div class="hero-content">
         <div class="hero-center">
@@ -110,7 +132,8 @@ export default {
   name: 'AppMundoBarco',
   data() {
     return {
-      currentLanguage: 'es'
+      currentLanguage: 'es',
+      mobileMenuOpen: false
     }
   },
   mounted() {
@@ -122,6 +145,9 @@ export default {
   methods: {
     toggleLanguage() {
       this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
+    },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
     },
     handleScroll() {
       const mainMenu = this.$refs.mainMenu;
@@ -262,6 +288,97 @@ body {
 .contact-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover span {
+  background: #ffd700;
+}
+
+/* Mobile Menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu {
+  background: white;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-logo {
+  height: 40px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu-link {
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link.active {
+  color: #3b82f6;
 }
 
 .hero-content {
@@ -544,92 +661,198 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .mundo-barco-container {
+    max-width: 90vw;
+  }
+  
+  .hero-title {
+    font-size: 3.8rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-title {
     font-size: 3.5rem;
   }
   
-  .content-card {
-    padding: 40px 30px;
+  .subtitle-text {
+    font-size: 2rem;
+  }
+  
+  .text-card {
+    padding: 30px 25px;
+  }
+  
+  .content-section {
+    min-height: 90vh;
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  .navbar-right {
+    gap: 10px;
+  }
+  
+  .lang-btn,
+  .contact-btn {
+    display: none;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .menu-items-nav {
+    display: none;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .hero {
+    min-height: 50vh;
   }
   
   .hero-content {
-    padding: 60px 25px 30px 25px;
+    padding: 40px 15px 20px 15px;
+    min-height: calc(50vh - 80px);
+  }
+  
+  .hero-center {
+    padding: 40px 20px;
   }
   
   .hero-title {
     font-size: 2.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
   }
   
   .subtitle-text {
     font-size: 1.8rem;
+    line-height: 1.3;
   }
   
-  .text-overlay {
-    max-width: 90vw;
-    width: 95%;
-    padding: 20px 15px;
+  .menu-content {
+    padding: 10px 15px;
+    max-width: 95vw;
+  }
+  
+  .home-link {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  
+  .mundo-barco-container {
+    max-width: 95vw;
+    padding: 0 10px;
   }
   
   .content-section {
-    min-height: 80vh;
+    min-height: 70vh;
+    margin: 15px 0;
+    border-radius: 20px;
+  }
+  
+  .text-overlay {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 10px;
+  }
+  
+  .text-card {
+    padding: 25px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
   }
   
   .text-card h3 {
-    font-size: 1.5rem;
-    padding-top: 1.7em;
-    padding-bottom: 0.5em;
+    font-size: 1.6rem;
+    padding-top: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    line-height: 1.3;
   }
   
   .text-card p {
     font-size: 1rem;
-    text-align: justify;
-    line-height: 1.4em;
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .contact-highlight {
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 8px;
   }
   
   .contact-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    line-height: 1.4;
   }
   
   .contact-link {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-break: break-all;
   }
   
   .contact-link.highlighted {
-    font-size: 1.1rem;
-  }
-  
-  .third-section {
-    min-height: 40em !important;
-    background-size: cover !important;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    margin-left: 0;
+    margin-top: 5px;
+    display: inline-block;
   }
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 12px 10px;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  .hero-content {
+    padding: 30px 10px 15px 10px;
+  }
+  
+  .hero-center {
+    padding: 20px 10px;
+  }
+  
   .hero-title {
     font-size: 2.2rem;
+    line-height: 1.1;
   }
   
   .subtitle-text {
     font-size: 1.5rem;
   }
   
-  .text-overlay {
-    max-width: 90vw;
-    width: 95%;
-    padding: 15px 10px;
+  .mundo-barco-container {
+    padding: 0 5px;
   }
   
   .content-section {
-    min-height: 70vh;
+    min-height: 60vh;
+    margin: 10px 0;
+  }
+  
+  .text-overlay {
+    padding: 15px 5px;
   }
   
   .text-card {
@@ -637,19 +860,33 @@ body {
   }
   
   .text-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    padding-bottom: 15px;
   }
   
   .text-card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  
+  .contact-highlight {
+    padding: 10px 12px;
+    margin: 10px 0;
   }
   
   .contact-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
   }
   
   .contact-link {
-    font-size: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .contact-link.highlighted {
+    font-size: 0.85rem;
+    padding: 3px 6px;
   }
 }
 </style>

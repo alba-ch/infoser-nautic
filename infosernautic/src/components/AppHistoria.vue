@@ -523,13 +523,11 @@ body {
   padding: 80px 50px 40px 50px;
   position: relative;
   z-index: 5;
-  min-height: calc(100vh - 160px);
   text-align: center;
 }
 
 .hero-center {
   max-width: 900px;
-  padding: 80px 60px;
 }
 
 .hero-title {
@@ -1042,7 +1040,7 @@ body {
   
   .hero-content {
     padding: 40px 15px 20px 15px;
-    min-height: calc(50vh - 80px);
+    min-height: inherit;
   }
   
   .hero-center {

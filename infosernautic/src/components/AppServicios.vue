@@ -56,6 +56,7 @@
       <div class="menu-content">
         <div class="menu-home">
           <router-link to="/" class="home-link">{{ currentLanguage === 'es' ? 'INICIO' : 'HOME' }}</router-link>
+          <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="mobile-sticky-logo" />
         </div>
         <div class="menu-items-nav">
           <router-link to="/servicios" class="menu-link-nav active">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
@@ -63,6 +64,11 @@
           <router-link to="/tarifas" class="menu-link-nav">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
           <router-link to="/about-us" class="menu-link-nav">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
         </div>
+        <button @click="toggleMobileMenu" class="hamburger-btn mobile-sticky-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
 
@@ -452,13 +458,13 @@ body {
 }
 
 /* Main Menu */
-.main-menu {
-  background: rgba(30, 58, 138, 0.95);
-  backdrop-filter: blur(20px);
-  transition: all 0.3s ease;
-  height: 60px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
+.main-menu.sticky-active {
+    display: block;
+    background: rgba(30, 58, 138, 0.90);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(30, 58, 138, 0.2);
+    height: 50px;
+  }
 
 .main-menu.sticky-active {
   position: fixed;
@@ -830,6 +836,63 @@ body {
   
   .hamburger-btn {
     display: flex;
+  }
+  
+  .main-menu {
+    display: none;
+  }
+  
+  .main-menu.sticky-active {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 50px;
+  }
+  
+  .main-menu.sticky-active .menu-content {
+    justify-content: space-between;
+    padding: 8px 15px;
+  }
+  
+  .main-menu.sticky-active .menu-home {
+    display: flex;
+  }
+  
+  .main-menu.sticky-active .home-link {
+    display: none;
+  }
+  
+  .mobile-sticky-logo {
+    display: none;
+  }
+  
+  .main-menu.sticky-active .mobile-sticky-logo {
+    display: block;
+    height: 35px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .mobile-sticky-hamburger {
+    display: none;
+  }
+  
+  .main-menu.sticky-active .mobile-sticky-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .main-menu.sticky-active .mobile-sticky-hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
   }
   
   .menu-items-nav {

@@ -73,6 +73,17 @@
             <router-link to="/tarifas" class="menu-link-nav">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
             <router-link to="/about-us" class="menu-link-nav">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
           </div>
+          <div class="menu-items-nav">
+          <router-link to="/servicios" class="menu-link-nav">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
+          <router-link to="/mundo-barco" class="menu-link-nav">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
+          <router-link to="/tarifas" class="menu-link-nav active">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
+          <router-link to="/about-us" class="menu-link-nav">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+        </div>
+        <button @click="toggleMobileMenu" class="hamburger-btn mobile-sticky-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         </div>
   
     </nav>
@@ -844,12 +855,14 @@ body {
 
 /* Main Menu */
 .main-menu {
-  background: rgba(30, 58, 138, 0.95);
+  background: rgba(30, 58, 138, 0.90);
   backdrop-filter: blur(20px);
   transition: all 0.3s ease;
   height: 60px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .main-menu.sticky-active {
   position: fixed;
@@ -858,6 +871,13 @@ body {
   right: 0;
   z-index: 1000;
 }
+.main-menu.sticky-active {
+    display: block;
+    background: rgba(30, 58, 138, 0.90);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(30, 58, 138, 0.2);
+    height: 50px;
+  }
 
 .menu-content {
   display: flex;

@@ -16,8 +16,30 @@
             </button>
           </div>
           <button class="contact-btn">{{ currentLanguage === 'es' ? 'Contacto' : 'Contact Us' }}</button>
+          <button @click="toggleMobileMenu" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
+      
+      <!-- Mobile Menu Overlay -->
+      <div v-if="mobileMenuOpen" class="mobile-menu-overlay" @click="toggleMobileMenu">
+        <div class="mobile-menu" @click.stop>
+          <div class="mobile-menu-header">
+            <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="mobile-logo" />
+            <button @click="toggleMobileMenu" class="close-btn">×</button>
+          </div>
+          <div class="mobile-menu-items">
+            <router-link to="/" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'INICIO' : 'HOME' }}</router-link>
+            <router-link to="/servicios" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
+            <router-link to="/mundo-barco" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
+            <router-link to="/tarifas" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
+            <router-link to="/about-us" class="mobile-menu-link active" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+          </div>
+        </div>
+      </div>
       
       <div class="hero-content">
         <div class="hero-center">
@@ -240,7 +262,8 @@ export default {
   name: 'AppHistoria',
   data() {
     return {
-      currentLanguage: 'es'
+      currentLanguage: 'es',
+      mobileMenuOpen: false
     }
   },
   mounted() {
@@ -252,6 +275,9 @@ export default {
   methods: {
     toggleLanguage() {
       this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
+    },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
     },
     handleScroll() {
       const mainMenu = this.$refs.mainMenu;
@@ -392,6 +418,97 @@ body {
 .contact-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover span {
+  background: #ffd700;
+}
+
+/* Mobile Menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu {
+  background: white;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-logo {
+  height: 40px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu-link {
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link.active {
+  color: #3b82f6;
 }
 
 .hero-content {
@@ -762,6 +879,16 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90vw !important;
+  }
+  
+  .hero-title {
+    font-size: 3.8rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-title {
     font-size: 3.5rem;
@@ -788,7 +915,7 @@ body {
   }
   
   .boats-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   
@@ -800,44 +927,187 @@ body {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 95vw !important;
+    padding: 0 15px;
+  }
   
-  .master-figure img,
-  .boat-figure img,
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  .navbar-right {
+    gap: 10px;
+  }
+  
+  .lang-btn,
+  .contact-btn {
+    display: none;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .menu-items-nav {
+    display: none;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .hero {
+    min-height: 50vh;
+  }
+  
+  .hero-content {
+    padding: 40px 15px 20px 15px;
+    min-height: calc(50vh - 80px);
+  }
+  
+  .hero-center {
+    padding: 40px 20px;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .subtitle-text {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  
+  .menu-content {
+    padding: 10px 15px;
+    max-width: 95vw;
+  }
+  
+  .home-link {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  
+  .story-section {
+    padding: 60px 0;
+  }
+  
+  .story-card {
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+  
+  .story-content {
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .story-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .story-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .story-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .story-text p,
+  .story-text-full p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .section-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .masters-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .master-figure img {
+    height: auto;
+    max-width: 250px;
+    width: 100%;
+  }
+  
+  .master-figure figcaption {
+    font-size: 0.85rem;
+  }
+  
+  .boats-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .boat-figure img {
+    height: auto;
+    max-width: 200px;
+    width: 100%;
+  }
+  
+  .boat-figure figcaption {
+    font-size: 0.85rem;
+  }
+  
+  .lilibeth-images,
+  .gallart-images,
+  .final-images,
+  .rejucilo-images,
+  .final-images-bottom {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
   .lilibeth-images img,
   .gallart-images img,
   .final-images img,
   .rejucilo-images img,
   .final-images-bottom img {
     height: auto;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 25px;
+    max-width: 300px;
+    width: 100%;
   }
   
-  .hero-content {
-    padding: 60px 25px 30px 25px;
+  .lilibeth-text {
+    font-size: 1rem;
+    margin-top: 15px;
   }
   
-  .hero-title {
-    font-size: 2.8rem;
+  .separator {
+    margin: 40px 0;
   }
   
-  .story-card {
-    padding: 40px 30px;
+  .separator img {
+    max-height: 1.5em;
   }
   
-  .story-text h2 {
-    font-size: 1.8rem;
-  }
-  
-  .story-text h3 {
-    font-size: 1.3rem;
+  .video-section {
+    padding: 60px 0;
   }
   
   .video-container {
@@ -851,16 +1121,79 @@ body {
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 12px 10px;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  .hero-content {
+    padding: 30px 10px 15px 10px;
+  }
+  
+  .hero-center {
+    padding: 20px 10px;
+  }
+  
   .hero-title {
     font-size: 2.2rem;
+    line-height: 1.1;
+  }
+  
+  .subtitle-text {
+    font-size: 1.2rem;
   }
   
   .story-card {
-    padding: 30px 20px;
+    padding: 20px 15px;
   }
   
   .story-text h2 {
     font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .story-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .story-text p,
+  .story-text-full p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  
+  .master-figure img {
+    max-width: 200px;
+  }
+  
+  .boat-figure img {
+    max-width: 150px;
+  }
+  
+  .lilibeth-images img,
+  .gallart-images img,
+  .final-images img,
+  .rejucilo-images img,
+  .final-images-bottom img {
+    max-width: 250px;
+  }
+  
+  .master-figure figcaption,
+  .boat-figure figcaption {
+    font-size: 0.8rem;
+  }
+  
+  .lilibeth-text {
+    font-size: 0.9rem;
+  }
+  
+  .video-container iframe {
+    height: 250px !important;
   }
 }
 </style>

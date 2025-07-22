@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: medusa-backend
+    env: node
+    rootDir: infoser-store
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: medusa-db
+          property: connectionString
+      - key: STORE_CORS
+        value: "*"
+      - key: ADMIN_CORS
+        value: "*"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: COOKIE_SECRET
+        generateValue: true
+
+databases:
+  - name: medusa-db
+    plan: free

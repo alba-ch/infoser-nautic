@@ -1,0 +1,489 @@
+<template>
+    <div class="historia container">
+        <section class="first-section">
+            <div class="flex-section">
+                <img src="../assets/sobre-nosotros/S1.png" alt="Monica Xufre" class="img-fluid"
+                    style="width: 100%; height: auto;" />
+
+                <div>
+                    <h2> Sobre mi vida de<br>marino hasta llegar al perito:</h2>
+                    <p>
+                        Monica Xufre ( Octubre 1967), se inició en la navegación a los 6 años de edad, comenzando su
+                        vida laboral a los 15 años en la revista SKIPPER.- Descubre la navegación de crucero de la mano
+                        de Enrique G.Curt. y realiza las primeras tareas de mantenimiento en el “Font Vella” como
+                        divertimento. Ello le llevó a lanzarse con 16 años y acabado el bachillerato, que cursó en
+                        nocturno, en el mantenimiento y reparación de barcos, como ayudante siendo contratada por la
+                        empresa BRICOMAR con sede en El Masnou.
+                    </p>
+                </div>
+            </div>
+
+            <div class="no-flex-section">
+                <p>Gracias a su experiencia en vela ligera y demostrado buen hacer como navegante en crucero, sus jefes,
+                    le confiaban pequeños traslados por la costa y a los 19 cruzaba a Baleares en solitario y conserva,
+                    una época sin gps, ni los precisos boletines meteorológicos de hoy. Su equipo era una corredera
+                    walker, compás sestrel y radiogonio Lofrans a pilas, amén de cartas y el perceptivo equipo de
+                    herramientas. ¡Era otra época! y tuvo excelentes maestros, auténticos marinos y navegantes.
+                    <br>
+                    Estuvo trasladando barcos por todo el mediterraneo con no pocos percances, muy variados. Esto le
+                    llevó a
+                    un agotamiento anímico y pasó 1989 reponiendose consiguiendo trabajo en el Club Náutico El Balís
+                    como
+                    Secretaria Técnica Deportiva , recobrando un poco de paz y tranquilidad. Pero el mar llama y “sala”
+                    la
+                    sangre. Tras este año de reposo, volvió al transporte de barcos, algunos clásicos, charter y tareas
+                    de
+                    tripulante hasta 1993. Finalmente en 1994 fundaba INFOSER NAUTIC SL “Los Clásicos”, Yacht Broker
+                    especialista en venta, restauración y reparación de clásicos que eran los que más le gustaban.
+                </p>
+            </div>
+        </section>
+
+        <!-- Imagen espaciadora -->
+        <div class="separador">
+            <img src="../assets/sobre-nosotros/ESPACIADOR.png" alt="Espaciadora" class="img-fluid"
+                style="width: 100%; height: auto;" />
+        </div>
+
+        <section class="second-section">
+            <div class="flex-section">
+                <img src="../assets/sobre-nosotros/FOTO 2.jpg" alt="Monica Xufre"
+                    style="width: 17em; height: fit-content;" />
+
+                <div>
+                    <h4>Tras 30 años se inicia una nueva etapa: </h4>
+                    <p>
+                        “He vendido, restaurado y rehabilitado muchos barcos clásicos y conozco perfectamente a la
+                        mayoría de
+                        diseñadores, astilleros y barcos de fibra, especialmente construidos en los 70, 80 y 90, Los
+                        posteriores
+                        no tienen mucho secreto para mi obviamente. He cerrado ya la etapa de la venta de barcos y
+                        actualmente
+                        me concentraré en la <b>peritación, tasación, valoración, asesoría técnica, certificación y medición</b>, también si
+                        surge
+                        una
+                        restauración, y por supuesto a navegar.
+                        <br>A lo largo de mi vida he contado con el apoyo y conocimiento de grandes personas del mundo
+                        náutico
+                        deportivo, que me han transmitido su conocimiento y experiencia.
+                        <br>Las menciones y recuerdos podrían ser interminables, <b>Jose M. Monjo</b> fue quien me dio
+                        trabajo
+                        en
+                        <b>BRICOMAR</b>, y en donde aprendí a efectuar reparaciones, a navegar y solventar problemas, a
+                        veces
+                        sola, a
+                        veces de marinera en travesías largas; era una época en
+                    </p>
+                </div>
+            </div>
+            <div class="no-flex-section">
+                <p>
+                    la que Masnou era puerto de
+                    referencia de la
+                    compra-venta de barcos y de ahí salíamos a entregar barcos a toda España por mar. Una época muy
+                    intensa,
+                    que me pasó factura.
+                </p>
+            </div>
+            <div class="flex-section">
+                <img src="../assets/sobre-nosotros/FOTO 2222.jpg" alt="Monica Xufre"
+                    style="width: 22em; height: fit-content;" />
+
+                <div>
+                    <p>
+                        En mis inicios, no siempre tope con “buenas personas”, pero por suerte las buenas personas han
+                        sido mayoría. Quiero agradecer a todas las personas buenas y respetuosas con las
+                        que me he topado, que por suerte, me animaron a no desistir, sobre todo agradecer al <b>Sr.
+                            Adame</b>
+                        (DEP), socio y gerente del <b>Club Náutico El Balís</b> en 1988-9, quien me dio la oportunidad
+                        de
+                        llevar la Secretaría Náutico Deportiva del Club , y recuperar esa estabilidad necesaria para
+                        continuar con más fuerza!. Pero el mar llama, y eso de hacer de barco comité, mientras los otros
+                        regatean y navegan, no fue lo mío, así que tras un año, que había recuperado la serenidad y estabilidad necesaria,
+                        volví al transporte de barcos, mantenimiento algún charter, etc. Justo terminé de la
+                        restauración de un <b>Carlson 29</b>, una gran empresa (<b>FCC SA</b>) me propuso llevar la
+                        comercialización de
+                        amarres en Mataro, Premia, Llança y Port Vell, (1993) y aproveché para colgar el traje de agua,
+                        e iniciar mi andadura como broker y reparadora de barcos, fundando INFOSER NAUTIC SL en 1994,
+                        combinando la venta y reparación de barcos, con la comercialización de amarres hasta 1998.
+                    </p>
+                </div>
+            </div>
+            <div class="no-flex-section">
+                <p>
+                     En esa época ya tenía mi 2º barco clásico.
+                    Participé en muchos Salones Náuticos, he vendido muchos barcos de madera desde 1994 hasta 2024 y
+                    también algunos de fibra y acero.
+                    <br>
+                    Son 30 años vendiendo y restaurando barcos. Ahora inicio una nueva etapa mucho más
+                    agradable, en cuanto a que la
+                    confianza se establece en el minuto “0” con el futuro comprandor. Vender barcos
+                     ya no es lo que era… y 30 años son más que suficientes.
+
+                </p>
+            </div>
+        </section>
+
+        <!-- Imagen espaciadora -->
+        <div class="separador">
+            <img src="../assets/sobre-nosotros/ESPACIADOR.png" alt="Espaciadora" class="img-fluid"
+                style="width: 100%; height: auto;" />
+        </div>
+
+        <section class="third-section">
+            <div class="no-flex-section">
+                <h6>Mención especial a:</h6>
+            </div>
+            <div class="flex-section">
+                <figure>
+                    <img src="../assets/sobre-nosotros/foto 3.jpg" alt="Monica Xufre"
+                        style="height: 15em; width: fit-content;" />
+                    <figcaption>Maestro Emilio Morales (DEP)<br>Foto: Ferrara 2014</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../assets/sobre-nosotros/FOTO 4.jpg" alt="Monica Xufre"
+                        style="height: 15em; width: fit-content;" />
+                    <figcaption> Maestro Joaquin Morales (hijo de Emilio)<br>Foto: Analia 2010</figcaption>
+                </figure>
+            </div>
+            <div class="no-flex-section">
+                <p>
+                    Grandes proyectos de restauración, no hubieran sido posibles sin la profesionalidad e implicación
+                    del Maestro Emilio y Maestro Joaquin, calafates de 4ª y 5ª generación, conocedores del oficio. Junto
+                    a ellos he restaurado barcos como el “Meltemi” (2007-8), “Analia” (2009-10) ”Lilibeth” (2011),
+                    “Ferrara” (2013-5), “Rejucilo IV” ( 2020) “La Juliana” (2019-22) “Bakea” (2022) y realizado muchas
+                    pequeñas reparaciones en otros barcos.
+
+                </p>
+            </div>
+            <div class="flex-section three-images">
+                <figure>
+                    <img src="../assets/sobre-nosotros/FOTO 5.jpg" alt="Monica Xufre" style="width: fit-content;" />
+                    <figcaption>Analia, ketch 24 mts</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../assets/sobre-nosotros/foto 6.jpg" alt="Monica Xufre" style="width: fit-content;" />
+                    <figcaption>Ferrara MFV 20 mts</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/sobre-nosotros/5.jpg" alt="Monica Xufre" style="width: fit-content;" />
+                    <figcaption>Meltemi, ketch 16 mts</figcaption>
+                </figure>
+            </div>
+
+            <div class="flex-section two-images">
+                <figure>
+                    <img src="../assets/sobre-nosotros/foto10.png" alt="Monica Xufre"
+                        style="height: 15em; width: fit-content; padding-right: 0.6em; padding-left: 3em;" />
+                   
+                </figure>
+
+                <figure>
+                    <img src="../assets/sobre-nosotros/foto11.png" alt="Monica Xufre"
+                        style="height: 15em; width: fit-content;" />
+                </figure>
+            </div>
+
+            <div class="no-flex-section two-images" style="padding-left: 5em;">
+                <p>
+                    Lilibeth 12 mts, un Dallimore que llegó procedente del lago Michigan!
+                </p>
+            </div>
+        </section>
+
+        <div class="separador">
+            <img src="../assets/sobre-nosotros/ESPACIADOR.png" alt="Espaciadora" class="img-fluid"
+                style="width: 100%; height: auto;" />
+        </div>
+
+        <section class="fourth-section">
+            <div class="flex-section">
+                <img src="../assets/sobre-nosotros/Foto 8.jpg" alt="Monica Xufre"
+                    style="height: 17em; width: fit-content;" />
+                <img src="../assets/sobre-nosotros/FOTO GALLARTS.jpg" alt="Monica Xufre"
+                    style="height: 17em; width: fit-content;" />
+            </div>
+
+            <div class="no-flex-section">
+                <p>
+                    <b>J.Jaume Gallart y foto gallarts</b><br>
+                    Todo lo que explicaba era oro para mi: la época dorada de la construcción en madera y la transición
+                    a la fibra: nadie como él para entender la industria náutica en España, desde la playa de Vilassar a
+                    aprender a UK el oficio. Sus historias sobre los salones náuticos en EEUU, no tenían
+                    desperdicio.<br>
+                    El primer barco que restaure (1994) era precisamente un Carlson 29, cuya mayoría de unidades se
+                    vendieron en EEUU.<br>
+                    He compartido muy buenos momentos, y ha sido un referente toda mi vida, ya que se trasladaron de
+                    Badalona (donde viví muchos años) a Mataró justo al lado de la nave de ASTILLEROS XUFRE, propiedad
+                    de un primo de mi padre y a donde iba de visita a menudo de pequeña con él..
+
+                </p>
+            </div>
+        </section>
+
+        <div class="separador">
+            <img src="../assets/sobre-nosotros/ESPACIADOR.png" alt="Espaciadora" class="img-fluid"
+                style="width: 100%; height: auto;" />
+        </div>
+
+        <section class="fifth-section">
+            <div class="flex-section">
+                <img src="../assets/sobre-nosotros/Foto 13.jpg" alt="Monica Xufre"
+                    style="height: 19.5em; width: fit-content; padding-right: 0.5em; margin-bottom: 0.5em;" />
+                <img src="../assets/sobre-nosotros/font vella.jpeg" alt="Monica Xufre"
+                    style="height: 19.5em; width: fit-content;" />
+            </div>
+            <div class="no-flex-section">
+                <p>
+                    <b>Yolanda Llinas</b>, yo misma, <b>Laura G.Curt</b> y <b>Enrique G. Curt</b>. En especial
+                    <b>Yolanda y Enrique</b> que me acogieron en la revista <b>Skipper</b>, (con 15 años recién
+                    cumplidos, mientras cursaba bachillerato nocturno ) en donde pude durante un par de años escribir
+                    artículos de regatas de windsurf, muy en boga en la época y en donde navegaba. De su mano, es donde
+                    descubrí las bondades de la navegación en crucero, a bordo del esponsorizado <b>“Font Vella”</b>,
+                    acompañándolos en los traslados pre regatas y me inicie en el mantenimiento como tareas de
+                    tripulante. El primer winche que abrí en mi vida para limpiar y engrasar era del FontVella. Una
+                    amistad que dura hasta hoy, ¡40 años no son nada! Con <b>Yolanda Llinas</b> somos miembros de la
+                    Junta Directiva de la <b>Asociación Española barcos de Época y Clásicos (AEBEC)</b>
+                </p>
+            </div>
+            <div class="flex-section">
+                <img src="../assets/sobre-nosotros/Foto 9.jpg" alt="Monica Xufre"
+                    style="height: 17.5em; width: fit-content; padding-right: 1em;  margin-bottom: 0.5em;" />
+                <img src="../assets/sobre-nosotros/REJUCILO.png" alt="Monica Xufre"
+                    style="height: 17.5em; width: fit-content;" />
+            </div>
+            <div class="no-flex-section">
+                <p>
+                    <b>Juan Kouyoumdjian : el reconocimiento a una trayectoria de 40 años.</b>
+                    <br>
+                    (<a href="https://www.juanyachtdesign.com">https://www.juanyachtdesign.com</a>) quien en 2019 acudió
+                    a mi para pedirme un informe técnico y consejo sobre su joya, la “Rejucilo IV”. Realice varias
+                    mejoras, y desde este año la tengo al cuidado y custodia, además la traslado personalmente allá
+                    donde Juan K la necesita. He recorrido ya más de 2500 millas con ella por todo el Mediterraneo
+                    occidental, y redescubierto la navegación a motor, que también tiene su encanto, sobre todo cuando
+                    vas con un mueble como la Rejucilo IV. Hay que estar muy atento a la meteo y la autonomía !!!
+                    Además, trabajar para Juan K, te aporta un aprendizaje constante de un mundo que era para mi
+                    desconocido, amén de tener la oportunidad de conocer grandes Ingenieros y navegantes, regatistas
+                    olímpicos, mundialistas, en fin, una élite de lujo del mundo de la vela de alta competición.
+                </p>
+            </div>
+            <div class="flex-section">
+                <img src="../assets/sobre-nosotros/FOTO 12.jpg" alt="Monica Xufre"
+                    style="height: 17.5em; width: fit-content; padding-right: 1em;" />
+                <img src="../assets/sobre-nosotros/FOTO 11.jpg" alt="Monica Xufre"
+                    style="height: 17.5em; width: fit-content;  margin-bottom: 2em;" />
+            </div>
+            <div class="no-flex-section pb-3">
+                <p>
+                    Cierro una etapa y abro otra.
+                </p>
+            </div>
+        </section>
+
+        <!-- Vídeo de Youtube -->
+        <div class="video-container pb-5">
+            <iframe width="700" height="500" src="https://www.youtube.com/embed/O1PUEqk5C3Q" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+
+
+
+
+    </div>
+</template>
+
+<style>
+/* Global Styles */
+.container {
+    justify-self: center;
+    max-width: 59em;
+    margin: 0 auto;
+}
+
+.historia {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+}
+
+.historia section {
+    margin: 0;
+    padding: 0;
+}
+
+.historia .flex-section {
+    padding-inline: 20px;
+    padding-bottom: 0px;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex
+}
+
+.historia h2 {
+    font-size: 24px;
+    font-style: italic;
+}
+
+.historia p {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: justify;
+}
+
+.historia .no-flex-section {
+    padding-inline: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.historia .first-section {
+    padding-top: 60px;
+}
+
+.historia .first-section img {
+
+    height: fit-content !important;
+    width: 20em !important;
+}
+
+.historia .separador {
+    margin-block: 3em;
+}
+
+.historia h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.historia .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.historia .second-section img {
+    padding-right: 1em;
+}
+
+.historia .third-section h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    font-style: italic;
+}
+
+.historia .third-section img {
+    padding-right: 3.5em;
+}
+
+.historia .third-section figcaption {
+    font-size: 0.9rem;
+    font-style: italic;
+
+}
+
+.historia .third-section .three-images img {
+    padding-right: 5px;
+    height: 10em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .historia .flex-section {
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-inline: 10px;
+  }
+
+  .historia .no-flex-section {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-inline: 10px;
+  }
+
+  .historia h2 {
+    font-size: 1.5rem;
+  }
+
+  .historia h4 {
+    font-size: 1.1rem;
+  }
+
+  .historia p {
+    font-size: 1rem;
+  }
+
+  .historia .first-section img,
+  .historia .second-section img,
+  .historia .third-section img,
+  .historia .fourth-section img,
+  .historia .fifth-section img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 1em;
+  }
+
+  .historia .third-section .three-images img {
+    height: auto !important;
+    max-width: 100%;
+    padding-right: 0 !important;
+  }
+
+  .historia .third-section figure {
+    margin-bottom: 1.5em;
+  }
+
+  /* Ajuste del iframe para vídeo responsive */
+  .video-container iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
+
+  .two-images img {
+    padding: 0 !important;
+  }
+
+  .two-images {
+    padding: 0 !important;
+  }
+
+}
+
+@media (max-width: 480px) {
+    .historia h2 {
+        font-size: 1.5rem;
+    }
+    
+    .historia h4 {
+        font-size: 1.1rem;
+    }
+    
+    .historia p {
+        font-size: 0.9rem;
+    }
+
+    .historia .first-section {
+        padding-top: 30px;
+    }
+    
+    .historia .first-section img,
+    .historia .second-section img,
+    .historia .third-section img,
+    .historia .fourth-section img,
+    .historia .fifth-section img {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 1em;
+    }
+}
+
+
+</style>

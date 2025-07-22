@@ -9,6 +9,7 @@ import AppHistoria from './components/AppHistoria.vue';
 import AppTarifas from './components/AppTarifas.vue';
 import AppServicios from './components/AppServicios.vue';
 import AppMundoBarco from './components/AppMundoBarco.vue';
+import AppTienda from './components/AppTienda.vue';
 
 
 
@@ -41,7 +42,7 @@ const routes = [
     {
       path: '/tienda',
       name: 'Tienda',
-      component: () => import('./components/AppShop.vue'),
+      component: AppTienda,
     },
   ];
 

@@ -198,7 +198,7 @@
             <h2>{{ currentLanguage === 'es' ? 'Visita Nuestra Tienda' : 'Visit Our Shop' }}</h2>
             <p>{{ currentLanguage === 'es' ? 'Descubre merchandising náutico exclusivo, informes profesionales y servicios especializados para entusiastas de barcos clásicos.' : 'Discover exclusive nautical merchandise, professional reports, and specialized services for classic boat enthusiasts.' }}</p>
             <div class="shop-links">
-              <a href="https://ko-fi.com/infosernautic/shop" target="_blank" class="shop-btn primary">
+              <a href="https://apptienda.com" target="_blank" class="shop-btn primary">
                 🛍️ {{ currentLanguage === 'es' ? 'Visitar Tienda' : 'Visit Our Store' }}
               </a>
               <a href="https://docs.google.com/spreadsheets/d/1t-13y7u2cRWIYO2ZxsN-SJXvm92NRyjn0SESdOsw0qQ/view?usp=drive_link" target="_blank" class="shop-btn secondary">

@@ -421,7 +421,7 @@
         </div>
 
         <!-- Survey 2 -->
-        <div class="service-card survey-2">
+        <div id="survey-2" class="service-card survey-2">
           <div class="service-content">
             <div class="service-text full-width">
               <h3 class="survey-title">{{ currentLanguage === 'es' ? '2: SURVEY: Con informe técnico' : '2: SURVEY: With technical report' }}</h3>
@@ -482,7 +482,7 @@
         </div>
 
         <!-- Survey 3 -->
-        <div class="service-card survey-3">
+        <div id="survey-3" class="service-card survey-3">
           <div class="service-content">
             <div class="service-text">
               <h3 class="survey-title">{{ currentLanguage === 'es' ? '3: SURVEY: Informe técnico que además podrá servir para obtención seguro todo riesgo' : '3: SURVEY: Technical report that can also be used to obtain comprehensive insurance' }}</h3>

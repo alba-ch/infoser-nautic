@@ -159,7 +159,7 @@
                   <span>{{ currentLanguage === 'es' ? 'Informe Completo' : 'Full Report' }}</span>
                 </div>
               </div>
-              <button class="view-details">{{ currentLanguage === 'es' ? 'Ver Informe' : 'View Report' }}</button>
+              <a @click="navigateToSurvey('survey-2')" class="view-details">{{ currentLanguage === 'es' ? 'Ver Informe' : 'View Report' }}</a>
             </div>
             <div class="card-image">
               <img src="../assets/tarifas/portadakatxalot.png" alt="Katxalot Survey" />
@@ -180,7 +180,7 @@
                   <span>{{ currentLanguage === 'es' ? 'Análisis Técnico' : 'Technical Analysis' }}</span>
                 </div>
               </div>
-              <button class="view-details">{{ currentLanguage === 'es' ? 'Ver Informe' : 'View Report' }}</button>
+              <a @click="navigateToSurvey('survey-3')" class="view-details">{{ currentLanguage === 'es' ? 'Ver Informe' : 'View Report' }}</a>
             </div>
             <div class="card-image">
               <img src="../assets/tarifas/louisemichel.png" alt="Louise Michel Survey" />
@@ -406,6 +406,18 @@ export default {
       } else {
         mainMenu.classList.remove('sticky-active');
       }
+    },
+    navigateToSurvey(surveyId) {
+      this.$router.push('/tarifas').then(() => {
+        this.$nextTick(() => {
+          setTimeout(() => {
+            const element = document.getElementById(surveyId);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 100);
+        });
+      });
     }
   }
 };
@@ -1048,6 +1060,8 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .view-details:hover {

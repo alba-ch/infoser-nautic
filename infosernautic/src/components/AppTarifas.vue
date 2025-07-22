@@ -16,8 +16,30 @@
             </button>
           </div>
           <button class="contact-btn">{{ currentLanguage === 'es' ? 'Contacto' : 'Contact Us' }}</button>
+          <button @click="toggleMobileMenu" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
+      
+      <!-- Mobile Menu Overlay -->
+      <div v-if="mobileMenuOpen" class="mobile-menu-overlay" @click="toggleMobileMenu">
+        <div class="mobile-menu" @click.stop>
+          <div class="mobile-menu-header">
+            <img src="../assets/logo-black.png" alt="INFOSER NAUTIC" class="mobile-logo" />
+            <button @click="toggleMobileMenu" class="close-btn">×</button>
+          </div>
+          <div class="mobile-menu-items">
+            <router-link to="/" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'INICIO' : 'HOME' }}</router-link>
+            <router-link to="/servicios" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'SERVICIOS' : 'SERVICES' }}</router-link>
+            <router-link to="/mundo-barco" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
+            <router-link to="/tarifas" class="mobile-menu-link active" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
+            <router-link to="/about-us" class="mobile-menu-link" @click="toggleMobileMenu">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+          </div>
+        </div>
+      </div>
       
       <div class="hero-content">
         <div class="hero-center">
@@ -435,7 +457,8 @@ export default {
     return {
       currentLanguage: 'es',
       showPdf: false,
-      showPdf2: false
+      showPdf2: false,
+      mobileMenuOpen: false
     }
   },
   mounted() {
@@ -447,6 +470,9 @@ export default {
   methods: {
     toggleLanguage() {
       this.currentLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
+    },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
     },
     handleScroll() {
       const mainMenu = this.$refs.mainMenu;
@@ -594,6 +620,97 @@ body {
 .contact-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover span {
+  background: #ffd700;
+}
+
+/* Mobile Menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu {
+  background: white;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-logo {
+  height: 40px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu-link {
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link.active {
+  color: #3b82f6;
 }
 
 .hero-content {
@@ -1210,6 +1327,16 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90vw !important;
+  }
+  
+  .hero-title {
+    font-size: 3.8rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-title {
     font-size: 3.5rem;
@@ -1222,78 +1349,487 @@ body {
   
   .service-content {
     flex-direction: column;
+    gap: 30px;
   }
   
   .service-card.reverse .service-content {
     flex-direction: column;
   }
+  
+  .pricing-grid-express,
+  .pricing-grid-survey {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 95vw !important;
+    padding: 0 15px;
+  }
+  
   .navbar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  
+  .navbar-right {
+    gap: 10px;
+  }
+  
+  .lang-btn,
+  .contact-btn {
+    display: none;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .menu-items-nav {
+    display: none;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .hero {
+    min-height: 50vh;
   }
   
   .hero-content {
-    padding: 60px 25px 30px 25px;
+    padding: 40px 15px 20px 15px;
+    min-height: calc(50vh - 80px);
+  }
+  
+  .hero-center {
+    padding: 40px 20px;
   }
   
   .hero-title {
     font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .year-text {
+    font-size: 1.4rem;
   }
   
   .header-images {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .header-logo {
+    width: 6em;
+  }
+  
+  .menu-content {
+    padding: 10px 15px;
+    max-width: 95vw;
+  }
+  
+  .home-link {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  
+  .tasaciones {
+    padding: 60px 0;
   }
   
   .section-card {
-    padding: 40px 30px;
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
   }
   
   .section-header h2 {
     font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .pricing-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .pricing-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .fiscal-badge {
+    align-self: center;
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .service-image {
+    max-width: 150px;
+    margin: 0 auto;
   }
   
   .price-row {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 10px;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 8px;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .length {
+    font-size: 0.85rem;
+  }
+  
+  .price {
+    font-size: 0.9rem;
   }
   
   .dots {
     display: none;
   }
   
+  .important-notes {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .note-text {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .disclaimer {
+    font-size: 0.85rem;
+  }
+  
+  .services {
+    padding: 60px 0;
+  }
+  
+  .service-card {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+  }
+  
+  .service-content {
+    gap: 25px;
+  }
+  
+  .service-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .service-text h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .express-title {
+    font-size: 1.6rem !important;
+  }
+  
+  .survey-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .service-text p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .highlight-text {
+    font-size: 1.1rem !important;
+  }
+  
+  .pricing-info,
+  .express-pricing {
+    padding: 15px;
+    margin-top: 15px;
+  }
+  
+  .pricing-info p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .service-image img {
+    width: 150px;
+  }
+  
+  .pricing-details p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .small-note {
+    font-size: 0.8rem;
+    margin-top: 12px;
+  }
+  
+  .highlight-note {
+    padding: 8px;
+    margin-top: 12px;
+  }
+  
+  .pdf-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .info-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .email-contact {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .call-text {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .phone-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .flag-icon {
+    width: 2.5em;
+  }
+  
+  .phone-number {
+    font-size: 1.6rem;
+  }
+  
+  .footer-section {
+    padding: 40px 0;
+  }
+  
+  .footer-content p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact {
+    padding: 60px 0;
+  }
+  
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 1.1rem;
+  }
+  
   .contact-methods {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
   
   .contact-method {
     min-width: auto;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
+    padding: 20px;
+  }
+  
+  .method-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .method-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .method-info a {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 12px 10px;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  .hero-content {
+    padding: 30px 10px 15px 10px;
+  }
+  
+  .hero-center {
+    padding: 20px 10px;
+  }
+  
   .hero-title {
     font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .year-text {
+    font-size: 1.2rem;
+  }
+  
+  .header-images {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .header-logo {
+    width: 5em;
+  }
+  
+  .section-card {
+    padding: 20px 15px;
   }
   
   .section-header h2 {
     font-size: 1.8rem;
   }
   
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .intro-text {
+    font-size: 0.95rem;
+  }
+  
+  .pricing-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .fiscal-badge {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+  
+  .price-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 5px;
+    padding: 10px;
+  }
+  
+  .length,
+  .price {
+    font-size: 0.8rem;
+  }
+  
   .service-card {
-    padding: 30px 20px;
+    padding: 20px 15px;
   }
   
   .service-text h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .service-text h4 {
+    font-size: 1rem;
+  }
+  
+  .express-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .survey-title {
+    font-size: 1.2rem !important;
+  }
+  
+  .service-text p {
+    font-size: 0.9rem;
+  }
+  
+  .highlight-text {
+    font-size: 1rem !important;
+  }
+  
+  .service-image img {
+    width: 120px;
+  }
+  
+  .pricing-info,
+  .express-pricing {
+    padding: 12px;
+  }
+  
+  .pricing-details p {
+    font-size: 0.8rem;
+  }
+  
+  .small-note {
+    font-size: 0.75rem;
+  }
+  
+  .info-title {
+    font-size: 1.4rem;
+  }
+  
+  .email-contact {
+    font-size: 1rem;
+  }
+  
+  .phone-number {
+    font-size: 1.4rem;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+  
+  .contact-method {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .method-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .method-info h3 {
+    font-size: 1rem;
+  }
+  
+  .method-info a {
+    font-size: 0.9rem;
   }
 }
 </style>

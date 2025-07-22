@@ -454,16 +454,28 @@ body {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
-  padding: 6px 12px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 0;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .home-link:hover {
-  background: rgba(255, 255, 255, 0.15);
   color: #fbbf24;
+}
+
+.home-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fbbf24;
+  transition: width 0.3s ease;
+}
+
+.home-link:hover::after {
+  width: 100%;
 }
 
 .menu-items-nav {

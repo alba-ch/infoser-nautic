@@ -649,7 +649,7 @@ body {
   padding: 80px 50px 40px 50px;
   position: relative;
   z-index: 5;
-  min-height: calc(100vh - 160px);
+  min-height: 100vh;
   text-align: center;
 }
 

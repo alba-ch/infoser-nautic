@@ -460,7 +460,7 @@ body {
     background: rgba(30, 58, 138, 0.90);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(30, 58, 138, 0.2);
-    height: 50px;
+    /*height: 50px;*/
   }
 
 .main-menu.sticky-active {

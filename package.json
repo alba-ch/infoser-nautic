@@ -1,0 +1,12 @@
+{
+  "name": "infoser-nautic",
+  "version": "1.0.0",
+  "description": "Infoser Nautic project with Medusa backend",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "cd infoser-store && npm install && npm run build",
+    "start": "cd infoser-store && npm start"
+  }
+}

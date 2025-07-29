@@ -1,5 +1,6 @@
 import Medusa from "@medusajs/medusa-js"
 
+// Note: Medusa backend (infoser-store) has been moved to infoser-back repository
 const medusa = new Medusa({
   baseUrl: "http://localhost:9000",
   maxRetries: 3,

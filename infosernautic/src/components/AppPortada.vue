@@ -72,6 +72,11 @@
           <router-link to="/mundo-barco" class="menu-link-nav">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
           <router-link to="/tarifas" class="menu-link-nav active">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
           <router-link to="/about-us" class="menu-link-nav">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+          <router-link to="/tienda" class="menu-link-nav shop-icon" :title="currentLanguage === 'es' ? 'Tienda' : 'Shop'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z" fill="white"/>
+            </svg>
+          </router-link>
         </div>
         <button @click="toggleMobileMenu" class="hamburger-btn mobile-sticky-hamburger">
           <span></span>
@@ -198,9 +203,9 @@
             <h2>{{ currentLanguage === 'es' ? 'Visita Nuestra Tienda' : 'Visit Our Shop' }}</h2>
             <p>{{ currentLanguage === 'es' ? 'Descubre merchandising náutico exclusivo, informes profesionales y servicios especializados para entusiastas de barcos clásicos.' : 'Discover exclusive nautical merchandise, professional reports, and specialized services for classic boat enthusiasts.' }}</p>
             <div class="shop-links">
-              <a href="https://apptienda.com" target="_blank" class="shop-btn primary">
+              <router-link to="/tienda" class="shop-btn primary">
                 🛍️ {{ currentLanguage === 'es' ? 'Visitar Tienda' : 'Visit Our Store' }}
-              </a>
+              </router-link>
               <a href="https://docs.google.com/spreadsheets/d/1t-13y7u2cRWIYO2ZxsN-SJXvm92NRyjn0SESdOsw0qQ/view?usp=drive_link" target="_blank" class="shop-btn secondary">
                 🎥 {{ currentLanguage === 'es' ? 'Barcos Especiales para Cine y Eventos' : 'Special Boats for Film & Events' }}
               </a>
@@ -1451,9 +1456,18 @@ body {
 
 .location-card {
   background: rgba(255,255,255,0.1);
-  padding: 30px;
+  padding: 85px 30px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
+}
+
+
+.shop-icon:hover {
+  transform: scale(1.1);
+}
+
+.shop-icon svg {
+  transition: all 0.3s ease;
 }
 
 .location-header {

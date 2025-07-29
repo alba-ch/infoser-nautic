@@ -66,6 +66,11 @@
           <router-link to="/mundo-barco" class="menu-link-nav">{{ currentLanguage === 'es' ? 'EL MUNDO DEL BARCO' : 'BOAT WORLD' }}</router-link>
           <router-link to="/tarifas" class="menu-link-nav active">{{ currentLanguage === 'es' ? 'TARIFAS' : 'RATES' }}</router-link>
           <router-link to="/about-us" class="menu-link-nav">{{ currentLanguage === 'es' ? 'MI HISTORIA' : 'MY STORY' }}</router-link>
+          <router-link to="/tienda" class="menu-link-nav shop-icon" :title="currentLanguage === 'es' ? 'Tienda' : 'Shop'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h2v10z" fill="white"/>
+            </svg>
+          </router-link>
         </div>
         <button @click="toggleMobileMenu" class="hamburger-btn mobile-sticky-hamburger">
           <span></span>
@@ -882,6 +887,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.shop-icon:hover {
+  transform: scale(1.1);
+}
+
+.shop-icon svg {
+  transition: all 0.3s ease;
 }
 
 .mobile-menu-items {

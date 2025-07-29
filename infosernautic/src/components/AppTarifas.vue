@@ -1943,7 +1943,8 @@ body {
   
   .pricing-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 15px;
   }
   

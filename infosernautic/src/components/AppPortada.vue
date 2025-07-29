@@ -204,10 +204,10 @@
             <p>{{ currentLanguage === 'es' ? 'Descubre merchandising náutico exclusivo, informes profesionales y servicios especializados para entusiastas de barcos clásicos.' : 'Discover exclusive nautical merchandise, professional reports, and specialized services for classic boat enthusiasts.' }}</p>
             <div class="shop-links">
               <router-link to="/tienda" class="shop-btn primary">
-                🛍️ {{ currentLanguage === 'es' ? 'Visitar Tienda' : 'Visit Our Store' }}
+                <div class="small-service-icon-white">🛍️</div> {{ currentLanguage === 'es' ? 'Visitar Tienda' : 'Visit Our Store' }}
               </router-link>
               <a href="https://docs.google.com/spreadsheets/d/1t-13y7u2cRWIYO2ZxsN-SJXvm92NRyjn0SESdOsw0qQ/view?usp=drive_link" target="_blank" class="shop-btn secondary">
-                🎥 {{ currentLanguage === 'es' ? 'Barcos Especiales para Cine y Eventos' : 'Special Boats for Film & Events' }}
+                <div class="small-service-icon-blue">🎥</div> {{ currentLanguage === 'es' ? 'Barcos Especiales para Cine y Eventos' : 'Special Boats for Film & Events' }}
               </a>
             </div>
           </div>
@@ -1340,8 +1340,30 @@ body {
 }
 
 .service-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 15px;
+  width: fit-content;
+  margin-inline: auto;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.small-service-icon-blue {
+  width: fit-content;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.small-service-icon-white {
+  width: fit-content;
+  background: linear-gradient(135deg, #dae8ff, #96efff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .service-card h3 {

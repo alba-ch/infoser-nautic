@@ -193,7 +193,7 @@ export default {
   methods: {
     async loadProducts() {
       try {
-        const response = await fetch(`${process.env.VUE_APP_API_URL || 'http://localhost:3001'}/api/products`);
+        const response = await fetch(`${process.env.VUE_APP_API_URL || 'https://infoser-back.onrender.com'}/api/products`);
         this.products = await response.json();
       } catch (error) {
         console.error('Error loading products:', error);
@@ -240,7 +240,7 @@ export default {
     },
     async submitOrder() {
       try {
-        const response = await fetch(`${process.env.VUE_APP_API_URL || 'http://localhost:3001'}/api/orders`, {
+        const response = await fetch(`${process.env.VUE_APP_API_URL || 'https://infoser-back.onrender.com'}/api/orders`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
